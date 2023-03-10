@@ -1,0 +1,22 @@
+body {
+    background-color: #1E1E1E;
+    font-family: "Audiowide", sans-serif;
+  }
+  h1 {
+    color: #7B02C6;
+    text-align: center;
+    font-size: 45px;
+    padding-top: 20px;
+  }
+  h3 {
+    color: white;
+    font-size: 35px;
+    padding-left: 50px;
+    text-decoration: underline #7B02C6 double;
+  }
+  p {
+    color: white;
+    font-size: 25px;
+    padding-left: 50px;
+    padding-right: 50px;
+  }
