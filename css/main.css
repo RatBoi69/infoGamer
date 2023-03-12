@@ -1,6 +1,7 @@
 body {
-  background-color: #1e1e1e;
-  font-family: Arial, Helvetica, sans-serif;}
+  background-image: url("../img/bg.png");
+  font-family: 'Montserrat',sans-serif;
+}
 
 /* Full-width input fields */
 input[type=username], input[type=password] {
@@ -144,3 +145,49 @@ span.psw {
      width: 100%;
   }
 }
+
+  header {
+    background-color: rgb(251, 235, 27);
+    color: white;
+  }
+  a:link, a:visited {
+    background-color: rgb(10, 16, 28);
+    color: white;
+    padding: 14px 25px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+  }
+  a:hover, a:active, button:hover {
+    background-color: rgb(25, 158, 207);
+  }
+  button {
+    background-color: rgb(10, 16, 28);
+    color: white;
+    padding: 14px 25px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 20px;    
+    margin-right: 20px;    
+    margin-left: 20px; 
+  }
+  h1 {
+    color: rgb(251, 235, 27);
+    text-align: center;
+    font-size: 48px;
+    font-weight: 700;
+  }
+  h3 {
+    color: white;
+    text-align: center;
+    font-size: 38px;
+    padding-left: 50px;
+  }
+  p {
+    color: white;
+    font-size: 28px;
+    font-weight: 300;
+    padding-left: 50px;
+    padding-right: 50px;
+  }

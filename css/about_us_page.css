@@ -65,8 +65,9 @@ table {
 	border-collapse: collapse;
 	text-align: center;
 }
-ol {
+ol, li {
 	color: white;
+	font-size: 30px;
 }
 td.img {
 	width: 300;
