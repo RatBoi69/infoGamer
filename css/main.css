@@ -33,6 +33,27 @@ h2 {
 	font-weight: 900;
 }
 
+/* Table */
+th, td {
+	color: white;
+	padding: 100px 0px;
+	text-align: center;
+}
+table {
+	width: 100%;
+	border-collapse: collapse;
+	text-align: center;
+}
+ol, li {
+	color: white;
+	font-size: 30px;
+}
+td.img {
+	width: 300;
+	height: 375;
+	
+}
+
 
 /* Extra styles for the cancel button */
 .cancelbtn {
