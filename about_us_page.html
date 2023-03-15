@@ -9,7 +9,7 @@
 	</head>
 	<body style="background-color:#1E1E1E;">
 	<header>
-		<nav class="topnav" id="myTopnav">
+		<nav class="topnav" id="myTopnav" >
             <div style="display: flex; justify-content: space-between;">
                 
                     <img src="img/ALlogo.png" width = "200px" style="padding: 5px 20px;" alt="Logo"/>
@@ -19,10 +19,10 @@
                     <a href="cost.html">Cost</a>
                 </div>
                 
-                <a><button onclick="document.getElementById('id01').style.display='block'" float="right" 
-                    style="width:100px;">Login</button></a>
+                <button onclick="document.getElementById('id01').style.display='block'" float="right" 
+                    style="width:100px;">Login</button>
             </div>
-        </nav>
+		</nav>
 			
 		</header>
 		<!-- 
@@ -68,43 +68,8 @@
 		</table>
 		</div>
 		
-	<div id="id01" class="modal">
-  
-  <form class="modal-content animate" action="/action_page.php" method="post">
-    <div class="imgcontainer">
-      <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
-    </div>
+	
 
-    <div class="container">
-      <label for="uname"><b>Username</b></label>
-      <input type="username" placeholder="Enter Username" name="uname" required>
-
-      <label for="psw"><b>Password</b></label>
-      <input type="password" placeholder="Enter Password" name="psw" required>
-        
-      <button type="submit">Login</button>
-      <label>
-        <input type="checkbox" checked="checked" name="remember"> Remember me
-      </label>
-    </div>
-
-    <div class="container" style="background-color:#f1f1f1">
-      <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
-      <span class="psw">Forgot <a href="#">password?</a></span>
-    </div>
-  </form>
-</div>
-
-<script>
-// Get the modal
-var modal = document.getElementById('id01');
-
-// When the user clicks anywhere outside of the modal, close it
-window.onclick = function(event) {
-    if (event.target == modal) {
-        modal.style.display = "none";
-    }
-}
 </script>
 	</body>
 </html>

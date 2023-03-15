@@ -1,13 +1,15 @@
 body {
     background-image: url("../img/bg.png");
     font-family: 'Montserrat',sans-serif;
+	margin: 0;
+	font-weight: 900;
   }
   header {
-    background-color: rgb(251, 235, 27);
+    background-color: rgb(25, 158, 207);
     color: white;
   }
   a:link, a:visited {
-    background-color: rgb(10, 16, 28);
+    background-color: rgb(25, 158, 207);
     color: white;
     padding: 14px 25px;
     text-align: center;
@@ -15,8 +17,21 @@ body {
     display: inline-block;
   }
   a:hover, a:active, button:hover {
-    background-color: rgb(25, 158, 207);
+    background-color: #00DBFF;
   }
+  /* Login Button */
+button {
+  background-color: #7b02c6;
+  
+  font-weight: 900;
+  color: #1e1e1e;
+  padding: 5px 50px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 96%;
+  height: 50px;
+}
   button {
     background-color: rgb(10, 16, 28);
     color: white;
