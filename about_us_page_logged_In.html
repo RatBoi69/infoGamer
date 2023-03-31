@@ -6,6 +6,47 @@
 		<title>About Us Page</title>
 		<link rel="stylesheet" href="css/about_us_page.css">
 		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Audiowide">
+		<style>
+			/* Style the dropdown button */
+			.dropdown {
+      position: relative;
+      display: inline-block;
+    }
+
+    /* Style the dropdown content */
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      z-index: 1;
+      background-color: #f1f1f1;
+      margin-top: 5px;
+	  margin-left: -120;
+    }
+
+    /* Style the links in the dropdown menu */
+    .dropdown-content a {
+      display: block;
+      padding: 12px 16px;
+      text-decoration: none;
+      color: white;
+    }
+
+    /* Style the links in the dropdown menu when hovering over them */
+    .dropdown-content a:hover {
+      background-color: #00DBFF;
+    }
+		</style>
+
+		<script>
+function myFunction() {
+  var x = document.getElementById("myTopnav");
+  if (x.className === "topnav") {
+    x.className += " responsive";
+  } else {
+    x.className = "topnav";
+  }
+}
+</script>
 	</head>
 	<body style="background-color:#1E1E1E;">
 	<header>
