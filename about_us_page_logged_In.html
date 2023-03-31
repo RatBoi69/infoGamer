@@ -5,7 +5,7 @@
 	<head>
 		<title>About Us Page</title>
 		<link rel="stylesheet" href="css/about_us_page.css">
-		
+
 		<style>
 			/* Style the dropdown button */
 			.dropdown {
@@ -60,8 +60,34 @@ function myFunction() {
                     <a href="cost.html">Cost</a>
                 </div>
                 
-                <button onclick="document.getElementById('id01').style.display='block'" float="right" 
-                    style="width:100px;">Login</button>
+                <!-- Create the clickable image -->
+				<div class="dropdown">
+					<img src="circle-user-solid.svg" width = "50px" style="padding: 15px 20px; position: relative; top: 0px; left: -120px;" alt="User Image" onclick="toggleDropdown()">
+					<!-- Create the dropdown menu -->
+					<div class="dropdown-content" id="dropdown">
+				<div>
+					<a href="https://www.website1.com">Profile</a>
+				</div>
+				<div>
+						<a href="https://www.website2.com">Favorites</a>
+				</div>
+				<div>
+					<a href="https://www.website3.com">Time Slots</a>
+				</div>
+				<div>
+					<a href="https://www.website4.com"> Log Out</a>
+				</div>
+
+				<script>
+					function toggleDropdown() {
+					var dropdown = document.getElementById("dropdown");
+					if (dropdown.style.display === "block") {
+						dropdown.style.display = "none";
+					} else {
+						dropdown.style.display = "block";
+					}
+					}
+				</script>
             </div>
 		</nav>
 			
