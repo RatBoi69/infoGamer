@@ -1,8 +1,8 @@
 body {
     background-image: url("../img/bg.png");
     font-family: 'Montserrat',sans-serif;
-	margin: 0;
-	font-weight: 900;
+	  margin: 0;
+	  font-weight: 900;
   }
   header {
     background-color: rgb(25, 158, 207);
@@ -22,7 +22,6 @@ body {
   /* Login Button */
 button {
   background-color: #7b02c6;
-  
   font-weight: 900;
   color: #1e1e1e;
   padding: 5px 50px;
@@ -62,44 +61,3 @@ button {
     padding-left: 50px;
     padding-right: 50px;
   }
-
-  /* Dropdown Button */
-
-.dropbtn {
-  background-color: rgb(25, 158, 207);
-  margin: 0;
-  position: absolute;
-  top: 50%;
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%);
-}
-/* The container <div> - needed to position the dropdown content */
-.dropdown {
-  position: relative;
-  display: inline-block;
-  padding-right: 50px;
-}
-
-/* Dropdown Content (Hidden by Default) */
-.dropdown-content {
-  display: none;
-  position: absolute;
-  background-color: #f1f1f1;
-  min-width: 100%;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  z-index: 1;
-}
-
-/* Links inside the dropdown */
-.dropdown-content a {
-  color: white;
-  padding: 12px 16px;
-  text-decoration: none;
-  display: block;
-}
-
-/* Change color of dropdown links on hover */
-/* .dropdown-content a:hover {background-color: #ddd;} 
-
-/* Show the dropdown menu on hover */
-.dropdown:hover .dropdown-content {display: block;}
