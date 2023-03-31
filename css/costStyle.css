@@ -65,7 +65,10 @@ button {
 
   /* Dropdown Button */
 
-
+  .dropbtn {
+    background-color: rgb(25, 158, 207);
+    padding: 16px;
+  }
 /* The container <div> - needed to position the dropdown content */
 .dropdown {
   position: relative;
