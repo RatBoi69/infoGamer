@@ -47,21 +47,26 @@ function myFunction() {
 			
 		</header>
 
-<input type="text" placeholder="Search Bar">
+<div id="id01" class="modal">
 
-<!--
-<h2><a href="games.html">Games</a></h2>
--->
-<div >
-		<table>
-		  <tr>
-			<td><img src = "img/games/AF.jpg" width="200" height="200"></td>
-			<td><img src = "img/games/BR.jpg" width="200" height="200"></td>
-			<td><img src = "img/games/GP.jpg" width="200" height="200"></td>
-			<td><img src = "img/games/JB.png" width="200" height="200"></td>
-		  </tr>
-		</table>
-		</div>
+    <div class="container">
+      <label for="uname"><b>Username</b></label>
+      <input type="username" placeholder="Enter Username" name="uname" required>
+
+      <label for="psw"><b>Password</b></label>
+      <input type="password" placeholder="Enter Password" name="psw" required>
+        
+      <button type="submit">Login</button>
+      <label>
+        <input type="checkbox" checked="checked" name="remember"> Remember me
+      </label>
+      <span class="psw">Forgot <a href="#">password?</a></span>
+	  <p></p>
+    </div>
+
+  </form>
+</div>
+
 
 </body>
 </html>
