@@ -73,17 +73,14 @@ h2  {
 
 th, td {
 	color: white;
-	padding: 8px;
+	padding: 4px;
 	text-align: center;
+  font-size: 30px;
 }
 table {
 	width: 100%;
 	border-collapse: collapse;
 	text-align: center;
-}
-ol, li {
-	color: white;
-	font-size: 30px;
 }
 td.img {
 	width: 300;
