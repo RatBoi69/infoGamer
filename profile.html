@@ -1,0 +1,142 @@
+<!-- A simple page to tell users a little bit about who we are
+     Copyright: 2023
+-->
+<html>
+	<head>
+		<title>Profile</title>
+		<link rel="stylesheet" href="css/about_us_page.css">
+
+		<style>
+			/* Style the dropdown button */
+			.dropdown {
+      position: relative;
+      display: inline-block;
+    }
+
+    /* Style the dropdown content */
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      z-index: 1;
+      background-color: #f1f1f1;
+      margin-top: 5px;
+	  margin-left: -120;
+    }
+
+    /* Style the links in the dropdown menu */
+    .dropdown-content a {
+      display: block;
+      padding: 12px 16px;
+      text-decoration: none;
+      color: white;
+    }
+
+    /* Style the links in the dropdown menu when hovering over them */
+    .dropdown-content a:hover {
+      background-color: #00DBFF;
+    }
+		</style>
+
+		<script>
+function myFunction() {
+  var x = document.getElementById("myTopnav");
+  if (x.className === "topnav") {
+    x.className += " responsive";
+  } else {
+    x.className = "topnav";
+  }
+}
+</script>
+	</head>
+	<body style="background-color:#1E1E1E;">
+	<header>
+		<nav class="topnav" id="myTopnav" >
+            <div style="display: flex; justify-content: space-between;">
+                
+                    <img src="img/ALlogo.png" width = "200px" style="padding: 5px 20px;" alt="Logo"/>
+                <div class="links" style="padding: 20px 0px 0px 380px;" float="right">
+                    <a href="index_logged_in.html">Home</a>
+                    <a href="about_us_page_logged_In.html">About Us</a>
+                    <a href="costLogin.html">Cost</a>
+                </div>
+                
+                <!-- Create the clickable image -->
+				<div class="dropdown">
+					<img src="circle-user-solid.svg" width = "50px" style="padding: 15px 20px; position: relative; top: 0px; left: -120px;" alt="User Image" onclick="toggleDropdown()">
+					<!-- Create the dropdown menu -->
+					<div class="dropdown-content" id="dropdown">
+				<div>
+					<a href="https://www.website1.com">Profile</a>
+				</div>
+				<div>
+						<a href="https://www.website2.com">Favorites</a>
+				</div>
+				<div>
+					<a href="https://www.website3.com">Time Slots</a>
+				</div>
+				<div>
+					<a href="https://www.website4.com"> Log Out</a>
+				</div>
+
+				<script>
+					function toggleDropdown() {
+					var dropdown = document.getElementById("dropdown");
+					if (dropdown.style.display === "block") {
+						dropdown.style.display = "none";
+					} else {
+						dropdown.style.display = "block";
+					}
+					}
+				</script>
+            </div>
+		</nav>
+			
+	</header>
+		<!-- 
+			do not know how to add the top part to the code
+		-->
+		<h1>Navigating the Website</h1>
+		<ol>
+			<li>The "Home" tab takes the user directly to the homepage to look at the games on the website</li>
+			<li>The "About Us" tab displays each of the admins responsible for creating the new website</li>
+			<li>The "Cost" tab displays the cost for each of the games</li>
+			<li>The "login" tab allows the user to make an account or sign into their own</li>
+		</ol>
+
+		<!-- 
+			Creates a table to present each of the group Members
+		-->
+		<h1>Profile</h1>
+		<div >
+		<table>
+		  <tr>
+			<th>Audrey Armontrout</th>
+			<th>Evan Williams</th>
+			<th>Jaden Peterson</th>
+			<th>Sebastian Boring</th>
+			<th>Tyler Worley</th>
+		  </tr>
+		  <tr>
+			<td><img src = "img/audrey_pic.jpeg" width="200" height="250"></td>
+			<td><img src = "img/Evan_pic.jpg" width="200" height="250"></td>
+			<td><img src = "img/jaden_pic.jpg" width="200" height="250"></td>
+			<td><img src = "img/seb_pic.jpg" width="200" height="250"> </img></td>
+			<td><img src = "img/tyler_pic.jpg" width="200" height="250"></td>
+		  </tr>
+		  <tr>
+			<td>My Name is Audrey Armontrout, I am currently enrolled at Miami University. I am getting a major in Software Engineering with a Minor in Games + Sim.
+			A fun fact about me is that I am an RA in Morris hall.</td>
+			<td>My Name is Evan Williams, I am currently enrolled at Miami University. I am getting a major in Computer Science with a Minor in Digital Innovation. A fun fact about me is that I am from both Frederick, Maryland and Columbus, Ohio</td>
+			<td>My Name is Jaden Peterson, I do not know what I am doing, all I know is that I must code. I have 7 years experience coding, and 3 years of experience with website development.</td>
+			<td>My Name is Sebastian Boring, I am currently enrolled at Miami University. I am getting a major in Computer Science with a Minor in Statistical Methods.
+			A fun fact about me is that I am the oldest of seven and I enjoy rock climbing.</td>
+			<td>My Name is Tyler Worley, I am currently enrolled at Miami University. Fun fact about me is that I love anime.</td>
+		  </tr>
+		</table>
+		</div>
+		
+	
+
+</script>
+	</body>
+</html>
