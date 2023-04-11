@@ -27,11 +27,11 @@ error_reporting(E_ALL);
         $cookie_name = "ArcadeLegacyUID";
         $cookie_value = $row["id"];
         setcookie($cookie_name, $cookie_value);
-        header('Location: account.php');
+        header('Location: index_logged_in.html');
         $conn->close();
         
     } else {
-        header('Location: login.html');
+        header('Location: index.html');
         $conn->close();
         
     }
