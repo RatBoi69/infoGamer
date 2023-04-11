@@ -31,7 +31,7 @@ error_reporting(E_ALL);
         $conn->close();
         
     } else {
-        header('Location: index.html');
+        header('Location: signup.html');
         $conn->close();
         
     }
