@@ -1,27 +1,38 @@
 <?php
-    $conn = new mysqli("sql9.freesqldatabase.com", "sql9610600", "ZE1RGDLzSD");
+ini_set('display_errors', 1); 
+ini_set('display_startup_errors', 1); 
+error_reporting(E_ALL);
+    $servername = "sql9.freesqldatabase.com";
+    $username = "sql9610600";
+    $password = "ZE1RGDLzSD";
+    $dbname = "sql9610600";
+    
+    // Create connection
+    $conn = new mysqli($servername, $username, $password, $dbname);
+    
     // Check connection
     if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
+      die("Connection failed: " . $conn->connect_error);
     }
 
-    $username = $_POST["uname"];
-    $password = $_POST["psw"];
-
-    $sql = "SELECT * from users WHERE username=$username AND password=$password";
+    $use = $_POST["uname"];
+    $pass = $_POST["psw"];
+    $sql = "SELECT * from users WHERE username='$use' AND password='$pass'";
     $result = $conn->query($sql);
 
+
     if ($result->num_rows == 1) {
+        
         // the user logged in successfully
         $cookie_name = "ArcadeLegacyUID";
         $cookie_value = $row["id"];
         setcookie($cookie_name, $cookie_value);
         header('Location: account.php');
         $conn->close();
-        exit;
+        
     } else {
         header('Location: login.html');
         $conn->close();
-        exit;
+        
     }
 ?>
