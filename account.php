@@ -22,7 +22,16 @@
         header('Location: login.html');
         $conn->close();
     } else {
-        echo "Welcome" . $_COOKIE[$cookie_name];
+        $identify = $_COOKIE[$cookie_name];
+        $sql = "SELECT * from users WHERE uid=$identify";
+        $result = $conn->query($sql);
+
+        if ($result->num_rows == 1) {
+            echo "Welcome" . $row["username"];
+            echo "your email is " . $row["email"];
+            echo "your passowrd is " . $row["password"];
+            
+        } 
     }
     ?>  
 </body>

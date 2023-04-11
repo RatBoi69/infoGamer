@@ -25,7 +25,7 @@ error_reporting(E_ALL);
         
         // the user logged in successfully
         $cookie_name = "ArcadeLegacyUID";
-        $cookie_value = $row["id"];
+        $cookie_value = $row["uid"];
         setcookie($cookie_name, $cookie_value);
         header('Location: index_logged_in.html');
         $conn->close();
