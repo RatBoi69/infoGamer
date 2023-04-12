@@ -22,10 +22,12 @@
 
 
     if ($result->num_rows == 1) {
-        while($row = $result->fetch_assoc()) {
-            $cookie_name = "ArcadeLegacyUID";
-            $cookie_value = $row["User_ID"];
-            setcookie($cookie_name, $cookie_value, time() + (86400 * 30), "/");          }
+        $result->data_seek(0);
+        $row = $result->fetch_assoc();
+        $cookie_name = "ArcadeLegacyUID";
+        $cookie_value = $row["User_ID"];
+        setcookie($cookie_name, $cookie_value, time() + (86400 * 30), "/");  
+        
         // the user logged in successfully
         header('Location: index_logged_in.html');
         $conn->close();
