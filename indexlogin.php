@@ -22,7 +22,7 @@
 
 <html>
 <head>
-    <title>Cost</title>
+    <title>InfoGamer</title>
     <link rel="stylesheet" type="text/css" href="css/main.css">
 
     <style>
