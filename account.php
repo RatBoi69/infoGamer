@@ -1,5 +1,3 @@
-<!DOCTYPE html>
-
     <?php
     ini_set('display_errors', 1); 
     ini_set('display_startup_errors', 1); 
@@ -23,13 +21,13 @@
         $conn->close();
     } else {
         $identify = $_COOKIE[$cookie_name];
-        $sql = "SELECT * from users WHERE uid=$identify";
+        $sql = "SELECT * from usersList WHERE User_ID=$identify";
         $result = $conn->query($sql);
 
         if ($result->num_rows == 1) {
-            echo "Welcome" . $row["username"];
-            echo "your email is " . $row["email"];
-            echo "your passowrd is " . $row["password"];
+            echo "Welcome" . $row["Username"];
+            echo "your email is " . $row["Email"];
+            echo "your passowrd is " . $row["Password"];
             
         } 
     }

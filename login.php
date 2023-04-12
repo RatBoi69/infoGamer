@@ -26,7 +26,7 @@
         // the user logged in successfully
         $cookie_name = "ArcadeLegacyUID";
         $cookie_value = $row["User_ID"];
-        setcookie($cookie_name, $cookie_value);
+        setcookie($cookie_name, $cookie_value, time() + (86400 * 30), "/");
         header('Location: index_logged_in.html');
         $conn->close();
         
