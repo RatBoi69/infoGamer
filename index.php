@@ -17,11 +17,11 @@
 
         $sql = "SELECT * from games";
         $result = $conn->query($sql);
+
 ?>  
 
 <html>
-	<head>
-        <?php echo '<link rel="stylesheet" type="text/css" href="css/main.css"></head>'; ?>
+		<head><link rel="stylesheet" type="text/css" href="css/main.css">
 		<title>InfoGamer</title>
 		<script>
 function myFunction() {
@@ -68,29 +68,60 @@ function myFunction() {
 			
 		</header>
 
-<input type="text" placeholder="Search Bar">
+<input type="text" id="getGame" onkeyup="searchFunction()" placeholder="Search Bar">
 
 
         <?php 
+		
          if ($result->num_rows > 0) {
-              echo "<table style='width:75%' class='center'>"; 
-              echo "<tr class='spaceUnder'>"; 
+              echo "<table id='gameTable' style='width:75%' class='center'>"; 
+              echo "<tr class='spaceAbove'>"; 
               echo "<th style='width:20%'>Game Title</th>"; 
               echo "<th style='width:50%'>Game Info</th>"; 
+              echo "<th style='width:20%'>Game Cost</th>"; 
               echo "<th style='width:10%'>Number of Players</th>"; 
               echo "<th style='width:20%'>Game Genre</th>"; 
               echo "</tr>";
             while($row = $result->fetch_assoc()) {
                 echo "<tr class='spaceUnder'>";
-                echo "<td>" . $row["Game_Name"] . "</td>";
+                echo "<td class='searchable'>" . $row["Game_Name"] . "</td>";
                 echo "<td>" . $row["Game_Info"] . "</td>";
-                echo "<td>" . $row["Num_of_Players"] . "</td>";
-                echo "<td>" . $row["Game_Genre"] . "</td>";
+                echo "<td class='searchable'>" . $row["Game_Cost"] . "</td>";
+                echo "<td class='searchable'>" . $row["Num_of_Players"] . "</td>";
+                echo "<td class='searchable'>" . $row["Game_Genre"] . "</td>";
                 echo "</tr>";
               }
               echo "</table>";
         }
+		
         ?>
+		
+		<script>
+		function searchFunction() {
+			// Declare starting variables
+			var input = document.getElementById("getGame");
+			var filter = input.value.toUpperCase();
+			var table = document.getElementById("gameTable");
+			var trs = table.tBodies[0].getElementsByClassName("spaceUnder");
+			// Loop through rows
+			for (var i = 0; i < trs.length; i++) {
+				// Define the cells
+				var tds = trs[i].getElementsByClassName("searchable");
+				// hide the row
+				trs[i].style.display = "none";
+				// loop through row cells
+				for (var i2 = 0; i2 < tds.length; i2++) {
+					// if there's a match
+					if (tds[i2].innerHTML.toUpperCase().indexOf(filter) > -1) {
+						// show the row
+						trs[i].style.display = "";
+						// skip to the next row
+						continue;
+					}
+				}
+			}
+		}
+		</script>
 
 </body>
 </html>
