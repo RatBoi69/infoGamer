@@ -17,7 +17,7 @@
 
     $cookie_name = "ArcadeLegacyUID";
     if(!isset($_COOKIE[$cookie_name])) {
-        header('Location: login.html');
+        header('Location: login.php');
         $conn->close();
     } else {
         $identify = $_COOKIE[$cookie_name];
@@ -86,7 +86,7 @@ function myFunction() {
                 
                     <img src="img/ALlogo.png" width = "200px" style="padding: 5px 20px;" alt="Logo"/>
                 <div class="links" style="padding: 20px 0px 0px 380px;" float="right">
-                    <a href="index_logged_in.html">Home</a>
+                    <a href="indexlogin.php">Home</a>
                     <a href="about_us_page_logged_In.html">About Us</a>
                     <a href="costLogin.html">Cost</a>
                 </div>
@@ -97,7 +97,7 @@ function myFunction() {
 					<!-- Create the dropdown menu -->
 					<div class="dropdown-content" id="dropdown">
 				<div>
-					<a href="profile.html">Profile</a>
+					<a href="account.php">Profile</a>
 				</div>
 				<div>
 						<a href="https://www.website2.com">Favorites</a>
@@ -106,7 +106,7 @@ function myFunction() {
 					<a href="https://www.website3.com">Time Slots</a>
 				</div>
 				<div>
-					<a href="index.html"> Log Out</a>
+					<a href="index.php"> Log Out</a>
 				</div>
 
 				<script>

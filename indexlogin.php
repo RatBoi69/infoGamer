@@ -21,49 +21,97 @@
 ?>  
 
 <html>
-		<head><link rel="stylesheet" type="text/css" href="css/main.css">
-		<title>InfoGamer</title>
-		<script>
+<head>
+    <title>Cost</title>
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+
+    <style>
+        /* Style the dropdown button */
+        .dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* Style the dropdown content */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  z-index: 1;
+  background-color: #f1f1f1;
+  margin-top: 5px;
+  margin-left: -120;
+}
+
+/* Style the links in the dropdown menu */
+.dropdown-content a {
+  display: block;
+  padding: 12px 16px;
+  text-decoration: none;
+  color: white;
+}
+
+/* Style the links in the dropdown menu when hovering over them */
+.dropdown-content a:hover {
+  background-color: #00DBFF;
+}
+    </style>
+
+    <script>
 function myFunction() {
-  var x = document.getElementById("myTopnav");
-  if (x.className === "topnav") {
-    x.className += " responsive";
-  } else {
-    x.className = "topnav";
-  }
+var x = document.getElementById("myTopnav");
+if (x.className === "topnav") {
+x.className += " responsive";
+} else {
+x.className = "topnav";
+}
 }
 </script>
-	</head>
-	<body>
-		<header>
-			<!--
-			<nav class="topnav" id="myTopnav">
-				<div style="display: flex; justify-content: space-between;">
-					<img src="img/logo.png" width = "200px" style="padding: 0px 20px;"
-						" alt="cool graphic" title="nice huh"/>
-					<div class="links" style="padding: 20px 0px 0px 380px;">
-						<a href="about_us_page.html" float="center" style="padding: 0px 60px 0px 0px;">About Us</a>
-						<a href="cost.html">Cost</a>
-					</div>
-					<a href="javascript:void(0);" class="icon" onclick="myFunction()">
-					<a><button onclick="document.getElementById('id01').style.display='block'" float="right" 
-						style="width:auto; position: absolute; right: 0;">Login</button></a>
-						<i class="fa fa-bars"></i></a>
-				</div>
-			</nav>
-			-->
+
+
+</head>
+<body>
+
+    <header>
 		<nav class="topnav" id="myTopnav" >
             <div style="display: flex; justify-content: space-between;">
                 
                     <img src="img/ALlogo.png" width = "200px" style="padding: 5px 20px;" alt="Logo"/>
                 <div class="links" style="padding: 20px 0px 0px 380px;" float="right">
                     <a href="indexlogin.php">Home</a>
-                    <a href="about_us">About Us</a>
-                    <a href="cost.html">Cost</a>
+                    <a href="about_us_page_logged_In.html">About Us</a>
+                    <a href="costLogin.html">Cost</a>
                 </div>
-                <a href="login.html"  float="right" 
-                    style="width:100px; font-weight: 900; padding: 33.9px 0px 0px 0px">Login</a>
-            </div>
+
+		<!-- Create the clickable image -->
+  		<div class="dropdown">
+    		<img src="circle-user-solid.svg" width = "50px" style="padding: 15px 20px; position: relative; top: 0px; left: -120px;" alt="User Image" onclick="toggleDropdown()">
+    		<!-- Create the dropdown menu -->
+    		<div class="dropdown-content" id="dropdown">
+      	<div>
+        	<a href="account.php">Profile</a>
+      	</div>
+      	<div>
+        		<a href="https://www.website2.com">Favorites</a>
+      	</div>
+      	<div>
+        	<a href="https://www.website3.com">Time Slots</a>
+      	</div>
+		<div>
+			<a href="index.php"> Log Out</a>
+		</div>
+
+		  <script>
+			function toggleDropdown() {
+			  var dropdown = document.getElementById("dropdown");
+			  if (dropdown.style.display === "block") {
+				dropdown.style.display = "none";
+			  } else {
+				dropdown.style.display = "block";
+			  }
+			}
+		  </script>
+    </div>
+  </div>
 		</nav>
 			
 		</header>

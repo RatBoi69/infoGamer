@@ -29,7 +29,7 @@
         setcookie($cookie_name, $cookie_value, time() + (86400 * 30), "/");  
         
         // the user logged in successfully
-        header('Location: index_logged_in.html');
+        header('Location: indexlogin.php');
         $conn->close();
         
     } else {
