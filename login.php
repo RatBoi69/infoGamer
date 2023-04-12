@@ -1,7 +1,7 @@
 <?php
-ini_set('display_errors', 1); 
-ini_set('display_startup_errors', 1); 
-error_reporting(E_ALL);
+    ini_set('display_errors', 1); 
+    ini_set('display_startup_errors', 1); 
+    error_reporting(E_ALL);
     $servername = "sql9.freesqldatabase.com";
     $username = "sql9610600";
     $password = "ZE1RGDLzSD";
@@ -17,7 +17,7 @@ error_reporting(E_ALL);
 
     $use = $_POST["uname"];
     $pass = $_POST["psw"];
-    $sql = "SELECT * from users WHERE username='$use' AND password='$pass'";
+    $sql = "SELECT * from usersList WHERE Username='$use' AND Password='$pass'";
     $result = $conn->query($sql);
 
 
@@ -25,7 +25,7 @@ error_reporting(E_ALL);
         
         // the user logged in successfully
         $cookie_name = "ArcadeLegacyUID";
-        $cookie_value = $row["uid"];
+        $cookie_value = $row["User_ID"];
         setcookie($cookie_name, $cookie_value);
         header('Location: index_logged_in.html');
         $conn->close();
