@@ -2,10 +2,10 @@
     ini_set('display_errors', 1); 
     ini_set('display_startup_errors', 1); 
     error_reporting(E_ALL);
-        $servername = "sql9.freesqldatabase.com";
-        $username = "sql9610600";
-        $password = "ZE1RGDLzSD";
-        $dbname = "sql9610600";
+    $servername = "sql.freedb.tech";
+    $username = "freedb_cse201";
+    $password = "?NHU8n?7FWyYUPK";
+    $dbname = "freedb_cse201";
         
         // Create connection
         $conn = new mysqli($servername, $username, $password, $dbname);
