@@ -3,112 +3,114 @@
      Copyright: 2023
 -->
 <html>
-<head>
-    <title>Cost</title>
-    <link rel="stylesheet" href="css/costStyle.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Audiowide">
+    <head>
+        <title>Cost</title>
+        <link rel="stylesheet" href="css/costStyle.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Audiowide">
+        <!-- 
+			      Makes the style page for the header
+		    -->
+        <style>
+            /* Style the dropdown button */
+            .dropdown {
+                position: relative;
+                display: inline-block;
+            }
 
-    <style>
-        /* Style the dropdown button */
-        .dropdown {
-  position: relative;
-  display: inline-block;
-}
+            /* Style the dropdown content */
+            .dropdown-content {
+                display: none;
+                position: absolute;
+                z-index: 1;
+                background-color: #f1f1f1;
+                margin-top: 5px;
+                margin-left: -120;
+            }
 
-/* Style the dropdown content */
-.dropdown-content {
-  display: none;
-  position: absolute;
-  z-index: 1;
-  background-color: #f1f1f1;
-  margin-top: 5px;
-  margin-left: -120;
-}
+            /* Style the links in the dropdown menu */
+            .dropdown-content a {
+                display: block;
+                padding: 12px 16px;
+                text-decoration: none;
+                color: white;
+            }
 
-/* Style the links in the dropdown menu */
-.dropdown-content a {
-  display: block;
-  padding: 12px 16px;
-  text-decoration: none;
-  color: white;
-}
-
-/* Style the links in the dropdown menu when hovering over them */
-.dropdown-content a:hover {
-  background-color: #00DBFF;
-}
-    </style>
-
-    <script>
-function myFunction() {
-var x = document.getElementById("myTopnav");
-if (x.className === "topnav") {
-x.className += " responsive";
-} else {
-x.className = "topnav";
-}
-}
-</script>
-
-
-</head>
-<body>
-
-    <header>
-		<nav class="topnav" id="myTopnav" >
-            <div style="display: flex; justify-content: space-between;">
-                
+            /* Style the links in the dropdown menu when hovering over them */
+            .dropdown-content a:hover {
+                background-color: #00DBFF;
+            }
+        </style>
+        <!-- 
+			      Creates the function to make the login menu more responsive
+		    -->
+        <script>
+            function myFunction() {
+                var x = document.getElementById("myTopnav");
+                if (x.className === "topnav") {
+                x.className += " responsive";
+                } else {
+                x.className = "topnav";
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <!-- 
+			      Here is how the user can go to different pages on the website
+		    -->
+        <header>
+            <nav class="topnav" id="myTopnav" >
+                <div style="display: flex; justify-content: space-between;">
                     <img src="img/ALlogo.png" width = "200px" style="padding: 5px 20px;" alt="Logo"/>
-                <div class="links" style="padding: 20px 0px 0px 380px;" float="right">
+                    <div class="links" style="padding: 20px 0px 0px 380px;" float="right">
                     <a href="indexlogin.php">Home</a>
                     <a href="about_us_page_logged_In.html">About Us</a>
                     <a href="costLogin.html">Cost</a>
                 </div>
-
-		<!-- Create the clickable image -->
-  		<div class="dropdown">
-    		<img src="circle-user-solid.svg" width = "50px" style="padding: 15px 20px; position: relative; top: 0px; left: -120px;" alt="User Image" onclick="toggleDropdown()">
-    		<!-- Create the dropdown menu -->
-    		<div class="dropdown-content" id="dropdown">
-      	<div>
-        	<a href="account.php">Profile</a>
-      	</div>
-      	<div>
-        		<a href="https://www.website2.com">Favorites</a>
-      	</div>
-      	<div>
-        	<a href="https://www.website3.com">Time Slots</a>
-      	</div>
-		<div>
-			<a href="cost.html"> Log Out</a>
-		</div>
-
-		  <script>
-			function toggleDropdown() {
-			  var dropdown = document.getElementById("dropdown");
-			  if (dropdown.style.display === "block") {
-				dropdown.style.display = "none";
-			  } else {
-				dropdown.style.display = "block";
-			  }
-			}
-		  </script>
-    </div>
-  </div>
-		</nav>
-			
-		</header>
-
-<h1>Game Costs</h1>
-<h3>
-    How much do the games at Arcade Legacy cost to play?
-</h3>
-<p>
-    <img src="img/pinball.jpg" alt="Pinball Machines" style="float:right;">
-    All games besides premium pinball machines are free to play with entry. Premium pinball is 50 cents per play.
-    <br><br><b>Entry Fees:</b>
-    <br>One Hour: $5.00
-    <br>Unlimited: $10.00
-    <br>Kids 3 and under are free with adult admission.
-</body>
+                <!-- Create the clickable image -->
+                <div class="dropdown">
+                    <img src="circle-user-solid.svg" width = "50px" style="padding: 15px 20px; position: relative; top: 0px; left: -120px;" alt="User Image" onclick="toggleDropdown()">
+                    <!-- Create the dropdown menu -->
+                    <div class="dropdown-content" id="dropdown">
+                        <div>
+                            <a href="account.php">Profile</a>
+                        </div>
+                        <div>
+                            <a href="https://www.website2.com">Favorites</a>
+                        </div>
+                        <div>
+                            <a href="https://www.website3.com">Time Slots</a>
+                        </div>
+                        <div>
+                            <a href="cost.html"> Log Out</a>
+                        </div>
+                        <script>
+                            function toggleDropdown() {
+                                var dropdown = document.getElementById("dropdown");
+                                if (dropdown.style.display === "block") {
+                                dropdown.style.display = "none";
+                                } else {
+                                dropdown.style.display = "block";
+                                }
+                            }
+                        </script>
+                    </div>
+                </div>
+            </nav>
+        </header>
+        <!-- 
+			      This displays the cost of the games and an image of the pinball machine
+		    -->
+        <h1>Game Costs</h1>
+        <h3>
+              How much do the games at Arcade Legacy cost to play?
+        </h3>
+        <p>
+        <img src="img/pinball.jpg" alt="Pinball Machines" style="float:right;">
+        All games besides premium pinball machines are free to play with entry. Premium pinball is 50 cents per play.
+        <br><br><b>Entry Fees:</b>
+        <br>One Hour: $5.00
+        <br>Unlimited: $10.00
+        <br>Kids 3 and under are free with adult admission.
+    </body>
 </html>
