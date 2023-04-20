@@ -188,7 +188,6 @@ label {
       function favoriteFunction() {
         var checkBox = document.getElementById($row["Game_ID"]);
         if (checkBox.checked == true){
-          text.style.display = "block";
           <?php
           $GID = $row["Game_ID"];
 
