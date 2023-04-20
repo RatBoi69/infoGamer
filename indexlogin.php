@@ -180,20 +180,23 @@ label {
 		
 
     <script>
-      function favoriteFunction() {
+      //var checkbox = document.querySelector("input[name=checkbox]");
+
         var checkBox = document.getElementById($row["Game_ID"]);
-        if (checkBox.checked == true){
+        
+        checkBox.addEventListener('change', function() {
+        if (this.checked) {
           <?php
           $GID = $row["Game_ID"];
 
     $sql = "INSERT INTO favorites (User_ID, Game_ID)
     VALUES ($identify, $GID)";
         ?>
-
         } else {
-          text.style.display = "none";
+          
         }
-      }
+      })
+        
     </script>
 
 
