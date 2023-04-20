@@ -23,8 +23,9 @@ if(!isset($_COOKIE[$cookie_name])) {
   $identify = $_COOKIE[$cookie_name];
 }
 
-$game = $_POST[$row["Game_ID"]];
+if ($_POST["1"] == 'Yes') {
+    $sql = "INSERT INTO favorites (Favorite_ID, User_ID, Game_ID)
+    VALUES (NULL, $identify, 1)";
+}
 
-$sql = "INSERT INTO favorites (Favorite_ID, User_ID, Game_ID)
-    VALUES (NULL, $identify, $game)";
 ?>
