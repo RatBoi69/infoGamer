@@ -142,7 +142,7 @@ label {
 }
 </style>
         <?php 
-		
+          echo "<form name='myform' class='myform' action='checkAltered.php' method='post'>";
          if ($result->num_rows > 0) {
               echo "<table id='gameTable' style='width:75%' class='center'>"; 
               echo "<tr class='spaceAbove'>"; 
@@ -167,34 +167,17 @@ label {
                 //echo "<td><input type='checkbox' id=" . $row["Game_ID"] . " checked><label for=" . $row["Game_ID"] . ">&#9829</label></td>";
                 
                 
-                echo "<td><input type='checkbox' id=" . $row["Game_ID"] . " onclick='favoriteFunction()'><label for=" . $row["Game_ID"] . ">&#9829</label></td>";
-
+                echo "<td><input type='checkbox' id=" . $row["Game_ID"] . "><label for=" . $row["Game_ID"] . ">&#9829</label></td>";
                
                 echo "</tr>";
               }
               echo "</table>";
+              echo "</form>";
         }
 		
         ?>
 
-    <script>
-
-
-function favoriteFunction() {
-        var x = document.getElementById($row["Game_ID"]).checked;
-        if (x) {
-          <?php
-          $GID = $row["Game_ID"];
-
-    $sql = "INSERT INTO favorites (Favorite_ID, User_ID, Game_ID)
-    VALUES (NULL, $identify, $GID)";
-        ?>
-        }
-      }
-
-      
-    </script>
-
+<script>document.myform.submit();</script>
 
 		<script>
 		function searchFunction() {
