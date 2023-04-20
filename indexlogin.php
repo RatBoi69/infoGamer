@@ -21,11 +21,6 @@
           $conn->close();
         } else {
           $identify = $_COOKIE[$cookie_name];
-          $sql = "SELECT * from favorites WHERE User_ID=$identify";
-          $result = $conn->query($sql);
-          if ($result->num_rows == 1) {
-            $UID = $result->fetch_assoc(); 
-          }
         }
 
         $sql = "SELECT * from games";
@@ -192,7 +187,7 @@ label {
           $GID = $row["Game_ID"];
 
     $sql = "INSERT INTO favorites (User_ID, Game_ID)
-    VALUES ($UID, $GID)";
+    VALUES ($identify, $GID)";
         ?>
 
         } else {
