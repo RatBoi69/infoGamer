@@ -119,6 +119,26 @@ x.className = "topnav";
 <input type="text" id="getGame" onkeyup="searchFunction()" placeholder="Search Bar">
 
 
+<style>
+/* hides the checkbox */
+input {
+  display: none;
+  cursor: pointer;
+}
+input ~ label {
+  color: white;
+}
+
+/* changes the color when selected */
+input:checked ~ label {
+  color: red;
+}
+/* for styling purpose only */
+label {
+  font-size: 2em;
+}
+</style>
+
         <?php 
 		
          if ($result->num_rows > 0) {
@@ -129,6 +149,7 @@ x.className = "topnav";
               echo "<th style='width:20%'>Game Cost</th>"; 
               echo "<th style='width:10%'>Number of Players</th>"; 
               echo "<th style='width:20%'>Game Genre</th>"; 
+              echo "<th style='width:40%'> Favorite </th>"; 
               echo "</tr>";
             while($row = $result->fetch_assoc()) {
                 echo "<tr class='spaceUnder'>";
@@ -137,6 +158,11 @@ x.className = "topnav";
                 echo "<td class='searchable'>" . $row["Game_Cost"] . "</td>";
                 echo "<td class='searchable'>" . $row["Num_of_Players"] . "</td>";
                 echo "<td class='searchable'>" . $row["Game_Genre"] . "</td>";
+               
+               
+                echo "<td><input type='checkbox' id=" . $row["Game_ID"] . "><label for=" . $row["Game_ID"] . ">&#9829</label></td>";
+
+               
                 echo "</tr>";
               }
               echo "</table>";
