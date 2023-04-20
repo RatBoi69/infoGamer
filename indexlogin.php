@@ -141,7 +141,6 @@ label {
   font-size: 2em;
 }
 </style>
-<div id="container">
         <?php 
 		
          if ($result->num_rows > 0) {
@@ -168,7 +167,7 @@ label {
                 //echo "<td><input type='checkbox' id=" . $row["Game_ID"] . " checked><label for=" . $row["Game_ID"] . ">&#9829</label></td>";
                 
                 
-                echo "<td><input type='checkbox' id=" . $row["Game_ID"] . "><label for=" . $row["Game_ID"] . ">&#9829</label></td>";
+                echo "<td><input type='checkbox' id=" . $row["Game_ID"] . " onclick='favoriteFunction()'><label for=" . $row["Game_ID"] . ">&#9829</label></td>";
 
                
                 echo "</tr>";
@@ -177,22 +176,21 @@ label {
         }
 		
         ?>
-</div>
 
     <script>
 
-document.querySelector('#container').onclick = function(ev) {
-  if(ev.target.checked == true) {
 
-    <?php
+function favoriteFunction() {
+        var x = document.getElementById($row["Game_ID"]).checked;
+        if (x) {
+          <?php
           $GID = $row["Game_ID"];
 
     $sql = "INSERT INTO favorites (Favorite_ID, User_ID, Game_ID)
     VALUES (NULL, $identify, $GID)";
         ?>
-  }
-}
-
+        }
+      }
 
       
     </script>
