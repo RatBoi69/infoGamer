@@ -97,16 +97,13 @@ function myFunction() {
 					<!-- Create the dropdown menu -->
 					<div class="dropdown-content" id="dropdown">
 				<div>
-					<a href="account.php">Profile</a>
+					<a href="account.php"><b>Profile</b></a>
 				</div>
 				<div>
-						<a href="https://www.website2.com">Favorites</a>
+						<a href="https://www.website2.com"><b>Favorites</b></a>
 				</div>
 				<div>
-					<a href="https://www.website3.com">Time Slots</a>
-				</div>
-				<div>
-					<a href="index.php"> Log Out</a>
+					<a href="index.php"><b>Log Out</b></a>
 				</div>
 
 				<script>
@@ -120,7 +117,7 @@ function myFunction() {
 					}
 				</script>
             </div>
-		</nav>	
+		</nav>	 
 	</header>
 		
 		<?php

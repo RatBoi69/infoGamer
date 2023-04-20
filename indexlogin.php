@@ -14,6 +14,19 @@
         if ($conn->connect_error) {
           die("Connection failed: " . $conn->connect_error);
         }
+        
+        $cookie_name = "ArcadeLegacyUID";
+        if(!isset($_COOKIE[$cookie_name])) {
+          header('Location: login.php');
+          $conn->close();
+        } else {
+          $identify = $_COOKIE[$cookie_name];
+          $sql = "SELECT * from favorites WHERE User_ID=$identify";
+          $result = $conn->query($sql);
+          if ($result->num_rows == 1) {
+            $UID = $result->fetch_assoc(); 
+          }
+        }
 
         $sql = "SELECT * from games";
         $result = $conn->query($sql);
@@ -88,17 +101,14 @@ x.className = "topnav";
     		<!-- Create the dropdown menu -->
     		<div class="dropdown-content" id="dropdown">
       	<div>
-        	<a href="account.php">Profile</a>
+        	<a href="account.php"><b>Profile</b></a>
       	</div>
       	<div>
-        		<a href="https://www.website2.com">Favorites</a>
+        		<a href="https://www.website2.com"><b>Favorites</b></a>
       	</div>
-      	<div>
-        	<a href="https://www.website3.com">Time Slots</a>
-      	</div>
-		<div>
-			<a href="index.php"> Log Out</a>
-		</div>
+		    <div>
+		      	<a href="index.php"><b>Log Out</b></a>
+		    </div>
 
 		  <script>
 			function toggleDropdown() {
@@ -123,12 +133,10 @@ x.className = "topnav";
 /* hides the checkbox */
 input {
   display: none;
-  cursor: pointer;
 }
 input ~ label {
   color: white;
 }
-
 /* changes the color when selected */
 input:checked ~ label {
   color: red;
@@ -159,8 +167,13 @@ label {
                 echo "<td class='searchable'>" . $row["Num_of_Players"] . "</td>";
                 echo "<td class='searchable'>" . $row["Game_Genre"] . "</td>";
                
+
+
                
-                echo "<td><input type='checkbox' id=" . $row["Game_ID"] . " checked><label for=" . $row["Game_ID"] . ">&#9829</label></td>";
+                //echo "<td><input type='checkbox' id=" . $row["Game_ID"] . " checked><label for=" . $row["Game_ID"] . ">&#9829</label></td>";
+                
+                
+                echo "<td><input type='checkbox' id=" . $row["Game_ID"] . "onclick='favoriteFunction()'><label for=" . $row["Game_ID"] . ">&#9829</label></td>";
 
                
                 echo "</tr>";
@@ -170,6 +183,26 @@ label {
 		
         ?>
 		
+
+    <script>
+      function favoriteFunction() {
+        var checkBox = document.getElementById($row["Game_ID"]);
+        if (checkBox.checked == true){
+          text.style.display = "block";
+          <?php
+          $GID = $row["Game_ID"];
+
+    $sql = "INSERT INTO favorites (User_ID, Game_ID)
+    VALUES ($UID, $GID)";
+        ?>
+
+        } else {
+          text.style.display = "none";
+        }
+      }
+    </script>
+
+
 		<script>
 		function searchFunction() {
 			// Declare starting variables
