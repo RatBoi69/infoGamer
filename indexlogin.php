@@ -141,7 +141,7 @@ label {
   font-size: 2em;
 }
 </style>
-
+<div id="container">
         <?php 
 		
          if ($result->num_rows > 0) {
@@ -177,26 +177,24 @@ label {
         }
 		
         ?>
-		
+</div>
 
     <script>
-      //var checkbox = document.querySelector("input[name=checkbox]");
 
-        var checkBox = document.getElementById($row["Game_ID"]);
-        
-        checkBox.addEventListener('change', function() {
-        if (this.checked) {
-          <?php
+document.querySelector('#container').onclick = function(ev) {
+  if(ev.target.checked == true) {
+
+    <?php
           $GID = $row["Game_ID"];
 
-    $sql = "INSERT INTO favorites (User_ID, Game_ID)
-    VALUES ($identify, $GID)";
+    $sql = "INSERT INTO favorites (Favorite_ID, User_ID, Game_ID)
+    VALUES (NULL, $identify, $GID)";
         ?>
-        } else {
-          
-        }
-      })
-        
+  }
+}
+
+
+      
     </script>
 
 
