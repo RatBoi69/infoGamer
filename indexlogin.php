@@ -168,7 +168,7 @@ label {
                 //echo "<td><input type='checkbox' id=" . $row["Game_ID"] . " checked><label for=" . $row["Game_ID"] . ">&#9829</label></td>";
                 
                 
-                echo "<td><label for=" . $row["Game_ID"] . ">&#9829</label><input type='checkbox' id=" . $row["Game_ID"] . "></td>";
+                echo "<td><input type='checkbox' id=" . $row["Game_ID"] . "><label for=" . $row["Game_ID"] . ">&#9829</label></td>";
 
                
                 echo "</tr>";
