@@ -172,6 +172,8 @@ label {
               } else {
                 if ($row["Game_ID"] == $favRow["Game_ID"]) {
                   echo "<td><input type='checkbox' id=" . $row["Game_ID"] . " value=" . $row["Game_ID"] . " name='check_list[]' onclick='favoriteFunction()' checked><label for=" . $row["Game_ID"] . ">&#9829</label></td>";
+                } else {
+                  echo "<td><input type='checkbox' id=" . $row["Game_ID"] . " value=" . $row["Game_ID"] . " name='check_list[]' onclick='favoriteFunction()'><label for=" . $row["Game_ID"] . ">&#9829</label></td>";
                 }
                 $x -= 1;
                 $faveRow = $favs->fetch_assoc();
