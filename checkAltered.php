@@ -27,7 +27,7 @@ if(!isset($_COOKIE[$cookie_name])) {
     // Loop to store and display values of individual checked checkbox.
         $game = $_POST['check_list'];
     // clear favorites table where users = cookie
-    $sql = "DELETE FROM favorites WHERE User_ID=$identify";
+    //$sql = "DELETE FROM favorites WHERE User_ID=$identify";
 
     foreach($game as $check_list){
         // pull from favorites where users = cookie and game id = this
