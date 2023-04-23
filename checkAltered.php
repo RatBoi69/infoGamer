@@ -21,13 +21,14 @@ if(!isset($_COOKIE[$cookie_name])) {
   $conn->close();
 }
   $identify = $_COOKIE[$cookie_name];
-  
+    
+  $sql = "DELETE FROM favorites WHERE User_ID=$identify";
+    $conn->query($sql);
     if(!empty($_POST['check_list'])){
     // Loop to store and display values of individual checked checkbox.
         $game = $_POST['check_list'];
     // clear favorites table where users = cookie
-    $sql = "DELETE FROM favorites WHERE User_ID=$identify";
-    $conn->query($sql);
+  
 
     foreach($game as $check_list){
    
