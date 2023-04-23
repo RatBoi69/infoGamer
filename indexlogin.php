@@ -166,7 +166,7 @@ label {
                 echo "<td class='searchable'>" . $row["Game_Genre"] . "</td>";
                
 
-              $x = 0;
+              $x = 1;
               mysqli_data_seek($favs, 0);
               if ($favs->num_rows == 0) {
                 $x = 1;
@@ -174,9 +174,7 @@ label {
               while($favRow = $favs->fetch_assoc()) {
                 if ($row["Game_ID"] == $favRow["Game_ID"]) {
                   echo "<td><input type='checkbox' id=" . $row["Game_ID"] . " value=" . $row["Game_ID"] . " name='check_list[]' onclick='favoriteFunction()' checked><label for=" . $row["Game_ID"] . ">&#9829</label></td>";
-                  
-                } else {
-                  $x = 1;
+                  $x = 0;
                 }
                 
               }
