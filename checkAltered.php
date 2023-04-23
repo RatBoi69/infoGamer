@@ -32,8 +32,10 @@ if(!isset($_COOKIE[$cookie_name])) {
     foreach($game as $check_list){
         // pull from favorites where users = cookie and game id = this
         // if null add it
-        $sql = "INSERT INTO favorites (User_ID, Game_ID) VALUES ($identify, $check_list)";
+        echo $identify."</br>";
+        echo $check_list."</br>";
+        //$sql = "INSERT INTO favorites (User_ID, Game_ID) VALUES ($identify, $check_list)";
     }
     }
-    header('Location: indexlogin.php');
+    //header('Location: indexlogin.php');
 ?>
