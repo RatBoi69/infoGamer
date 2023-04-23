@@ -22,12 +22,18 @@ if(!isset($_COOKIE[$cookie_name])) {
 }
   $identify = $_COOKIE[$cookie_name];
 
+  
 
     if(!empty($_POST['check_list'])){
     // Loop to store and display values of individual checked checkbox.
-    foreach($_POST['check_list'] as $selected){
-        echo $selected."</br>";
+        $game = $_POST['check_list'];
+    // clear favorites table where users = cookie
+    foreach($game as $check_list){
+        // pull from favorites where users = cookie and game id = this
+        // if null add it
+        echo $check_list."</br>";
     }
+
     }
   
 
