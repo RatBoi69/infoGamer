@@ -30,13 +30,9 @@ if(!isset($_COOKIE[$cookie_name])) {
     $sql = "DELETE FROM favorites WHERE User_ID=$identify";
 
     foreach($game as $check_list){
-        // pull from favorites where users = cookie and game id = this
-        // if null add it
         
-        //$sql .= "INSERT INTO favorites (User_ID, Game_ID) VALUES ($identify, $check_list)";
+        $sql = "INSERT INTO favorites (User_ID, Game_ID) VALUES ($identify, $check_list)";
     }
     }
-
-
     header('Location: indexlogin.php');
 ?>
