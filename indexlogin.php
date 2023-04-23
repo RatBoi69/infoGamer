@@ -146,8 +146,6 @@ label {
 }
 </style>
         <?php 
-          $favRow = $favs->fetch_assoc();
-          $x = $favs->num_rows;
           echo "<form name='myform' class='myform' action='checkAltered.php' method='post'>";
          if ($result->num_rows > 0) {
               echo "<table id='gameTable' style='width:75%' class='center'>"; 
@@ -167,19 +165,18 @@ label {
                 echo "<td class='searchable'>" . $row["Num_of_Players"] . "</td>";
                 echo "<td class='searchable'>" . $row["Game_Genre"] . "</td>";
                
-              if ($x == 0) {
-                echo "<td><input type='checkbox' id=" . $row["Game_ID"] . " value=" . $row["Game_ID"] . " name='check_list[]' onclick='favoriteFunction()'><label for=" . $row["Game_ID"] . ">&#9829</label></td>";
-              } else {
+
+              $x = 0;
+              while($favRow = $favs->fetch_assoc()) {
                 if ($row["Game_ID"] == $favRow["Game_ID"]) {
                   echo "<td><input type='checkbox' id=" . $row["Game_ID"] . " value=" . $row["Game_ID"] . " name='check_list[]' onclick='favoriteFunction()' checked><label for=" . $row["Game_ID"] . ">&#9829</label></td>";
-                  $x -= 1;
-                  $faveRow = $favs->fetch_assoc();
-                } else {
-                  echo "<td><input type='checkbox' id=" . $row["Game_ID"] . " value=" . $row["Game_ID"] . " name='check_list[]' onclick='favoriteFunction()'><label for=" . $row["Game_ID"] . ">&#9829</label></td>";
                 }
-                
+                $x = 1;
               }
-               
+              if ($x == 1) {
+                echo "<td><input type='checkbox' id=" . $row["Game_ID"] . " value=" . $row["Game_ID"] . " name='check_list[]' onclick='favoriteFunction()'><label for=" . $row["Game_ID"] . ">&#9829</label></td>";
+              }
+                             
                 echo "</tr>";
               }
               echo "</table>";
