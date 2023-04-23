@@ -28,20 +28,14 @@ if(!isset($_COOKIE[$cookie_name])) {
     // Loop to store and display values of individual checked checkbox.
         $game = $_POST['check_list'];
     // clear favorites table where users = cookie
+    $sql = "DELETE FROM favorites WHERE User_ID=$identify";
+
     foreach($game as $check_list){
         // pull from favorites where users = cookie and game id = this
         // if null add it
-        echo $check_list."</br>";
-    }
+        $sql = "INSERT INTO favorites (Favorite_ID, User_ID, Game_ID)
+        VALUES (NULL, $identify, $check_list)";
 
     }
-  
-
-
-
-//if ($_POST["1"] == 'Yes') {
-    //$sql = "INSERT INTO favorites (Favorite_ID, User_ID, Game_ID)
-    //VALUES (NULL, $identify, 1)";
-//}
-
+    }
 ?>
