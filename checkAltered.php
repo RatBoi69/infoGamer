@@ -26,6 +26,10 @@ if(!isset($_COOKIE[$cookie_name])) {
     if(!empty($_POST['check_list'])){
     // Loop to store and display values of individual checked checkbox.
         $game = $_POST['check_list'];
+        $cookie_name = "ArcadeLegacyFavorites";
+        $cookie_value = $game;
+        setcookie($cookie_name, $cookie_value, time() + (86400 * 30), "/");
+        echo "Value is: " . $_COOKIE[$cookie_name];
     // clear favorites table where users = cookie
     $sql = "DELETE FROM favorites WHERE User_ID=$identify";
     $conn->query($sql);
