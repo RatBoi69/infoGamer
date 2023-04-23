@@ -28,10 +28,11 @@ if(!isset($_COOKIE[$cookie_name])) {
         $game = $_POST['check_list'];
     // clear favorites table where users = cookie
     $sql = "DELETE FROM favorites WHERE User_ID=$identify";
-
+    $conn->query($sql);
     foreach($game as $check_list){
         
         $sql = "INSERT INTO favorites (User_ID, Game_ID) VALUES ($identify, $check_list)";
+        $conn->query($sql);
     }
     }
     header('Location: indexlogin.php');
