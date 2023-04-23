@@ -36,5 +36,21 @@ if(!isset($_COOKIE[$cookie_name])) {
         $sql .= "INSERT INTO favorites (User_ID, Game_ID) VALUES ($identify, $check_list)";
     }
     }
-    //header('Location: indexlogin.php');
+    if ($mysqli -> multi_query($sql)) {
+        do {
+          // Store first result set
+          if ($result = $mysqli -> store_result()) {
+            
+           $result -> free_result();
+          }
+          // if there are more result-sets, the print a divider
+         
+           //Prepare next result set
+        } while ($mysqli -> next_result());
+      }
+      
+      $mysqli -> close();
+
+
+    header('Location: indexlogin.php');
 ?>
