@@ -23,9 +23,20 @@ if(!isset($_COOKIE[$cookie_name])) {
   $identify = $_COOKIE[$cookie_name];
 
 
-if ($_POST["1"] == 'Yes') {
-    $sql = "INSERT INTO favorites (Favorite_ID, User_ID, Game_ID)
-    VALUES (NULL, $identify, 1)";
-}
+  if(isset($_POST['submit'])){//to run PHP script on submit
+    if(!empty($_POST['check_list'])){
+    // Loop to store and display values of individual checked checkbox.
+    foreach($_POST['check_list'] as $selected){
+    echo $selected."</br>";
+    }
+    }
+  }
+
+
+
+//if ($_POST["1"] == 'Yes') {
+    //$sql = "INSERT INTO favorites (Favorite_ID, User_ID, Game_ID)
+    //VALUES (NULL, $identify, 1)";
+//}
 
 ?>

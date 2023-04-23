@@ -167,7 +167,7 @@ label {
                 //echo "<td><input type='checkbox' id=" . $row["Game_ID"] . " checked><label for=" . $row["Game_ID"] . ">&#9829</label></td>";
                 
                 
-                echo "<td><input type='checkbox' id=" . $row["Game_ID"] . " onclick='favoriteFunction()'><label for=" . $row["Game_ID"] . ">&#9829</label></td>";
+                echo "<td><input type='checkbox' id=" . $row["Game_ID"] . " name='check_list[]' onclick='favoriteFunction()'><label for=" . $row["Game_ID"] . ">&#9829</label></td>";
                
                 echo "</tr>";
               }
