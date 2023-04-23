@@ -26,8 +26,7 @@ if(!isset($_COOKIE[$cookie_name])) {
     if(!empty($_POST['check_list'])){
     // Loop to store and display values of individual checked checkbox.
     foreach($_POST['check_list'] as $selected){
-    echo $key."</br>";
-    echo $value."</br>";
+        echo $selected."</br>";
     }
     }
   
