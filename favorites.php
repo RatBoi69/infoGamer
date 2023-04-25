@@ -25,6 +25,9 @@
 
         $sql = "SELECT * from games";
         $result = $conn->query($sql);
+		
+		$sqlDbl = "SELECT * from games";
+        $Dbl = $conn->query($sqlDbl);
 
         $sqlFav = "SELECT * from favorites WHERE User_ID=$identify";
         $favs = $conn->query($sqlFav);
@@ -125,8 +128,6 @@ x.className = "topnav";
 			
 		</header>
 
-<input type="text" id="getGame" onkeyup="searchFunction()" placeholder="Search Bar">
-
 
 <style>
 /* hides the checkbox */
@@ -144,49 +145,53 @@ input:checked ~ label {
 label {
   font-size: 2em;
 }
+td {
+  font-size: 30px;
+}
 </style>
         <?php 
-          echo "<form name='myform' class='myform' action='checkAltered.php' method='post'>";
-         if ($result->num_rows > 0) {
-              echo "<table id='gameTable' style='width:75%' class='center'>"; 
-              echo "<tr class='spaceAbove'>"; 
-              echo "<th style='width:20%'>Game Title</th>"; 
-              echo "<th style='width:50%'>Game Info</th>"; 
-              echo "<th style='width:20%'>Game Cost</th>"; 
-              echo "<th style='width:10%'>Number of Players</th>"; 
-              echo "<th style='width:20%'>Game Genre</th>"; 
-              echo "<th style='width:40%'> Favorite </th>"; 
-              echo "</tr>";
+		
+		echo "<h1>Your Favorites</h1>";
             while($row = $result->fetch_assoc()) {
-                echo "<tr class='spaceUnder'>";
-                echo "<td class='searchable'>" . $row["Game_Name"] . "</td>";
-                echo "<td>" . $row["Game_Info"] . "</td>";
-                echo "<td class='searchable'>" . $row["Game_Cost"] . "</td>";
-                echo "<td class='searchable'>" . $row["Num_of_Players"] . "</td>";
-                echo "<td class='searchable'>" . $row["Game_Genre"] . "</td>";
-               
-
-              $x = 1;
               mysqli_data_seek($favs, 0);
-              if ($favs->num_rows == 0) {
-                $x = 1;
-              }
               while($favRow = $favs->fetch_assoc()) {
+				echo "<table id='gameTable' style='width:30%' class='center'>"; 
+				echo "<tr>";
                 if ($row["Game_ID"] == $favRow["Game_ID"]) {
-                  echo "<td><input type='checkbox' id=" . $row["Game_ID"] . " value=" . $row["Game_ID"] . " name='check_list[]' onclick='favoriteFunction()' checked><label for=" . $row["Game_ID"] . ">&#9829</label></td>";
-                  $x = 0;
+                  echo "<td>" . $row["Game_Name"] . "</td>";
+				  
+				  //make favorite
+				  
+					echo "<td><input type='checkbox' id=" . $row["Game_ID"] . " value=" . $row["Game_ID"] . " 
+						name='check_list[]' onclick='favoriteFunction()' checked><label for=" . $row["Game_ID"] . ">
+						&#9829</label></td>";
+					$x = 0;
+				  
+				  if ($x == 1) {
+					echo "<td><input type='checkbox' id=" . $row["Game_ID"] . " value=" . $row["Game_ID"] . "
+					name='check_list[]' onclick='favoriteFunction()'><label for=" . $row["Game_ID"] . ">
+					&#9829</label></td>";
+				  }
+				  //
+				  echo "<tr class='spaceBelow'>"; 
+				  echo "<td style='font-size: 20px; padding: 0px 20px 0px 20px;'><u>More Like This</u></td>";
+				  //make tables
+				  // search table for row[gamegenre]
+				  //display top 3
+				  echo "<tr><td>" . $row["Game_Genre"] . "</td></tr>";
+				  
+				  echo "</tr>";
+				}
+				echo "</tr>";
+				echo "</table>";
+					
+				  
+				  
+				  
                 }
-                
               }
-              if ($x == 1) {
-                echo "<td><input type='checkbox' id=" . $row["Game_ID"] . " value=" . $row["Game_ID"] . " name='check_list[]' onclick='favoriteFunction()'><label for=" . $row["Game_ID"] . ">&#9829</label></td>";
-              }
-                             
-                echo "</tr>";
-              }
-              echo "</table>";
-              echo "</form>";
-        }
+            
+        
 		
         ?>
 
@@ -197,7 +202,7 @@ label {
 </script>
 
 		<script>
-		function searchFunction() {
+		function searchFunction(String s) {
 			// Declare starting variables
 			var input = document.getElementById("getGame");
 			var filter = input.value.toUpperCase();
@@ -206,7 +211,7 @@ label {
 			// Loop through rows
 			for (var i = 0; i < trs.length; i++) {
 				// Define the cells
-				var tds = trs[i].getElementsByClassName("searchable");
+				var tds = trs[i].getElementsByClassName(s);
 				// hide the row
 				trs[i].style.display = "none";
 				// loop through row cells

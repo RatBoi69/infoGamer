@@ -23,9 +23,16 @@
         $identify = $_COOKIE[$cookie_name];
         $sql = "SELECT * from usersList WHERE User_ID=$identify";
         $result = $conn->query($sql);
+		
+		$sqlGame = "SELECT * from games";
+        $games = $conn->query($sqlGame);
+		
+		$sqlFav = "SELECT * from favorites WHERE User_ID=$identify";
+		$favs = $conn->query($sqlFav);
 
         if ($result->num_rows == 1) {
             $row = $result->fetch_assoc(); 
+			$gameRow = $games->fetch_assoc(); 
         } else {
 
         }
@@ -100,7 +107,7 @@ function myFunction() {
 					<a href="account.php"><b>Profile</b></a>
 				</div>
 				<div>
-						<a href="https://www.website2.com"><b>Favorites</b></a>
+						<a href="favorites.php"><b>Favorites</b></a>
 				</div>
 				<div>
 					<a href="index.php"><b>Log Out</b></a>
@@ -125,6 +132,8 @@ function myFunction() {
         echo "<p><br><b>Your username is: " . $row["Username"] . "</b></br>";
         echo "<br><b>Your password is: " . $row["Password"] . "</b></br>";
         echo "<br><b>Your email is: " . $row["Email"] . "</b></br></p>";
+		echo "<tr class='spaceUnder'>";
+		
         ?>
 
 </script>
