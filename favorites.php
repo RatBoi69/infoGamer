@@ -165,6 +165,7 @@ td {
 		}
 		
 		echo "<h1>Your Favorites</h1>";
+		echo "<form name='myform' class='myform' action='checkAlteredFavoritePage.php' method='post'>";
             while($row = $result->fetch_assoc()) {
               mysqli_data_seek($favs, 0);
               while($favRow = $favs->fetch_assoc()) {
@@ -219,12 +220,14 @@ td {
 				}
 				echo "</tr>";
 				echo "</table>";
+				
 					
 				  
 				  
 				  
                 }
               }
+              echo "</form>";
             
         
 		
