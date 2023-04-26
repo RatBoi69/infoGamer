@@ -82,20 +82,20 @@
                     <a href="costLogin.html">Cost</a>
                 </div>
 
-                <!-- Create the clickable image -->
-                <div class="dropdown">
-                    <img src="circle-user-solid.svg" width = "50px" style="padding: 15px 20px; position: relative; top: 0px; left: -120px;" alt="User Image" onclick="toggleDropdown()">
-                    <!-- Create the dropdown menu -->
-                    <div class="dropdown-content" id="dropdown">
-                    <div>
-                        <a href="account.php"><b>Profile</b></a>
-                    </div>
-                    <div>
-                        <a href="https://www.website2.com"><b>Favorites</b></a>
-                    </div>
-                    <div>
-                        <a href="index.php"><b>Log Out</b></a>
-                    </div>
+		<!-- Create the clickable image -->
+  		<div class="dropdown">
+    		<img src="circle-user-solid.svg" width = "50px" style="padding: 15px 20px; position: relative; top: 0px; left: -120px;" alt="User Image" onclick="toggleDropdown()">
+    		<!-- Create the dropdown menu -->
+    		<div class="dropdown-content" id="dropdown">
+      	<div>
+        	<a href="account.php"><b>Profile</b></a>
+      	</div>
+      	<div>
+        		<a href="favorites.php"><b>Favorites</b></a>
+      	</div>
+		    <div>
+		      	<a href="index.php"><b>Log Out</b></a>
+		    </div>
 
                     <script>
                         function toggleDropdown() {
@@ -112,6 +112,6 @@
 		</nav>
 	</header>
 
-    
+
 </body>
 </html>
