@@ -150,6 +150,19 @@ td {
 }
 </style>
         <?php 
+		$data = array();
+		
+		$genreData = array();
+		$idData = array();
+		$nameData = array();
+		while($newFavRow = $favs->fetch_assoc()) {
+			$data[] = $newFavRow['Game_ID'];
+		}
+		while($checkRow = $Dbl->fetch_assoc()) {
+			$genreData[] = $checkRow['Game_Genre'];
+			$idData[] = $checkRow['Game_ID'];
+			$nameData[] = $checkRow['Game_Name'];
+		}
 		
 		echo "<h1>Your Favorites</h1>";
             while($row = $result->fetch_assoc()) {
@@ -160,7 +173,7 @@ td {
                 if ($row["Game_ID"] == $favRow["Game_ID"]) {
                   echo "<td>" . $row["Game_Name"] . "</td>";
 				  
-				  //make favorite
+				  //make favorite - this doesn't work
 				  
 					echo "<td><input type='checkbox' id=" . $row["Game_ID"] . " value=" . $row["Game_ID"] . " 
 						name='check_list[]' onclick='favoriteFunction()' checked><label for=" . $row["Game_ID"] . ">
@@ -173,13 +186,35 @@ td {
 					&#9829</label></td>";
 				  }
 				  //
+				  
 				  echo "<tr class='spaceBelow'>"; 
 				  echo "<td style='font-size: 20px; padding: 0px 20px 0px 20px;'><u>More Like This</u></td>";
 				  //make tables
 				  // search table for row[gamegenre]
 				  //display top 3
-				  echo "<tr><td>" . $row["Game_Genre"] . "</td></tr>";
+				  $i = 0;
 				  
+				  
+				  for ($n = 0; $n < count($idData); $n++) {
+					  if ($i < 3) {
+						if ($row["Game_Genre"] == $genreData[$n] and !(in_array($idData[$n], $data))) {
+									echo "<tr><td style='font-size: 20px; padding: 0px 20px 0px 20px;'>" . $nameData[$n] . "</td>";
+									
+									//make favorite - this doesn't work
+				  
+									$j = 1;
+				  
+									 if ($j == 1) {
+										echo "<td style='font-size: 20px; padding: 0px 20px 0px 20px;'><input type='checkbox' id=" . $idData[$n] . " value=" . $idData[$n] . "
+										name='check_list[]' onclick='favoriteFunction()'><label for=" . $idData[$n] . ">
+										&#9829</label></td>";
+									 }
+									//
+									echo "</tr>";
+									$i++;
+							}
+					  }
+				  }
 				  echo "</tr>";
 				}
 				echo "</tr>";
