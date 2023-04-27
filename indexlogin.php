@@ -164,7 +164,7 @@ label {
                 echo "<td class='searchable'>" . $row["Num_of_Players"] . "</td>";
                 echo "<td class='searchable'>" . $row["Game_Genre"] . "</td>";
                 echo "<td class='searchable'>" . $row["Game_Rating"] . "/5</td>";
-
+                echo "<th style='width:40%'>Rate This Game</th>"; 
               $x = 1;
               mysqli_data_seek($favs, 0);
               if ($favs->num_rows == 0) {
@@ -180,7 +180,9 @@ label {
               if ($x == 1) {
                 echo "<td><input type='checkbox' id=" . $row["Game_ID"] . " value=" . $row["Game_ID"] . " name='check_list[]' onclick='favoriteFunction()'><label for=" . $row["Game_ID"] . ">&#9829</label></td>";
               }
-      
+              
+              echo "<td><button id='myBtn'>Rate This Game</button></td>";
+
                 echo "</tr>";
               }
               echo "</table>";
