@@ -24,7 +24,7 @@
   }
 
   $gid = $_POST['rdb'];
-    $getGame = "SELECT * from games WHERE User_ID=$gid";
+    $getGame = "SELECT * from games WHERE Game_ID=$gid";
         $targetGame = $conn->query($getGame);
         if ($targetGame->num_rows == 1) {
             $row = $result->fetch_assoc(); 
