@@ -23,6 +23,13 @@
     $identify = $_COOKIE[$cookie_name];
   }
 
+  $gid = $_POST['rdb'];
+    $getGame = "SELECT * from ratings WHERE User_ID=$gid";
+        $targetGame = $conn->query($getGame);
+        if ($targetGame->num_rows == 1) {
+            $row = $result->fetch_assoc(); 
+        }
+
   $sqlRate = "SELECT * from ratings WHERE User_ID=$identify";
   $rates = $conn->query($sqlRate);
 ?>  
@@ -124,10 +131,7 @@ x.className = "topnav";
         <?php 
 
         //handle form data, based on the value of the button press
-        $gid = $_POST['rdb'];
-        $getGame = "SELECT * from ratings WHERE User_ID=$gid";
-        $targetGame = $conn->query($getGame);
-        
+        echo "<h1>Rate " . $row["Game_Name"] . "</h1>";
 
 
 
