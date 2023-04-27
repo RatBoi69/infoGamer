@@ -27,7 +27,7 @@
     $getGame = "SELECT * from games WHERE Game_ID=$gid";
         $targetGame = $conn->query($getGame);
         if ($targetGame->num_rows == 1) {
-            $row = $result->fetch_assoc(); 
+            $row = $targetGame->fetch_assoc(); 
         }
 
   $sqlRate = "SELECT * from ratings WHERE User_ID=$identify";
