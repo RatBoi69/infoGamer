@@ -155,6 +155,7 @@ label {
               echo "<th style='width:20%'>Genre</th>"; 
               echo "<th style='width:20%'>Rating</th>"; 
               echo "<th style='width:40%'>Favorite</th>"; 
+              echo "<th style='width:40%'>Rate This Game</th>"; 
               echo "</tr>";
             while($row = $result->fetch_assoc()) {
                 echo "<tr class='spaceUnder'>";
@@ -164,7 +165,7 @@ label {
                 echo "<td class='searchable'>" . $row["Num_of_Players"] . "</td>";
                 echo "<td class='searchable'>" . $row["Game_Genre"] . "</td>";
                 echo "<td class='searchable'>" . $row["Game_Rating"] . "/5</td>";
-                echo "<th style='width:40%'>Rate This Game</th>"; 
+                
               $x = 1;
               mysqli_data_seek($favs, 0);
               if ($favs->num_rows == 0) {
