@@ -120,26 +120,7 @@ x.className = "topnav";
 			
 		</header>
 
-<input type="text" id="getGame" onkeyup="searchFunction()" placeholder="Search Bar">
 
-
-<style>
-/* hides the checkbox */
-input {
-  display: none;
-}
-input ~ label {
-  color: white;
-}
-/* changes the color when selected */
-input:checked ~ label {
-  color: red;
-}
-/* for styling purpose only */
-label {
-  font-size: 2em;
-}
-</style>
         <?php 
 
         //handle form data, based on the value of the button press
@@ -160,32 +141,7 @@ label {
 
 </script>
 
-		<script>
-		function searchFunction() {
-			// Declare starting variables
-			var input = document.getElementById("getGame");
-			var filter = input.value.toUpperCase();
-			var table = document.getElementById("gameTable");
-			var trs = table.tBodies[0].getElementsByClassName("spaceUnder");
-			// Loop through rows
-			for (var i = 0; i < trs.length; i++) {
-				// Define the cells
-				var tds = trs[i].getElementsByClassName("searchable");
-				// hide the row
-				trs[i].style.display = "none";
-				// loop through row cells
-				for (var i2 = 0; i2 < tds.length; i2++) {
-					// if there's a match
-					if (tds[i2].innerHTML.toUpperCase().indexOf(filter) > -1) {
-						// show the row
-						trs[i].style.display = "";
-						// skip to the next row
-						continue;
-					}
-				}
-			}
-		}
-		</script>
+
 
 </body>
 </html>
