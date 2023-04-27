@@ -154,7 +154,6 @@ x.className = "topnav";
 }
 .rate:not(:checked) > label:before {
     content: '★ ';
-    text-align: center;
 }
 .rate > input:checked ~ label {
     color: #ffc700;    
@@ -173,7 +172,7 @@ x.className = "topnav";
 
 </style>
 
-<div class="rate">
+<div class="rate" margin="auto" width="50%">
     <input type="radio" id="star5" name="rate" value="5" />
     <label for="star5" title="text">5 stars</label>
     <input type="radio" id="star4" name="rate" value="4" />
