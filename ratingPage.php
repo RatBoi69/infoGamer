@@ -135,7 +135,6 @@ x.className = "topnav";
         ?>
 <style>
 .rate {
-    text-align: center;
     float: left;
     height: 60px;
     padding: 0 10px;
@@ -150,12 +149,12 @@ x.className = "topnav";
     overflow:hidden;
     white-space:nowrap;
     cursor:pointer;
-    text-align: center;
     font-size:60px;
     color:#ccc;
 }
 .rate:not(:checked) > label:before {
     content: '★ ';
+    text-align: center;
 }
 .rate > input:checked ~ label {
     color: #ffc700;    
