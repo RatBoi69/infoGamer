@@ -184,7 +184,7 @@ label {
               echo "</form>";
 
               echo "<form name='ratingform' class='ratingform' action='ratingPage.php' method='post'>";
-              echo "<td><button id='myBtn' value=" . $row["Game_ID"] . " onclick='ratingFunction()'>Rate This Game</button></td>";
+              echo "<td><button id='myBtn' name='rdb' value=" . $row["Game_ID"] . " onclick='ratingFunction()'>Rate This Game</button></td>";
               echo "</form>";
 
                 echo "</tr>";

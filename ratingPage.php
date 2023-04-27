@@ -23,9 +23,6 @@
     $identify = $_COOKIE[$cookie_name];
   }
 
-  $sql = "SELECT * from games";
-  $result = $conn->query($sql);
-
   $sqlRate = "SELECT * from ratings WHERE User_ID=$identify";
   $rates = $conn->query($sqlRate);
 ?>  
@@ -144,27 +141,10 @@ label {
 }
 </style>
         <?php 
-         if ($result->num_rows > 0) {
-              echo "<table id='gameTable' style='width:75%' class='center'>"; 
-              echo "<tr class='spaceAbove'>"; 
-              echo "<th style='width:20%'>Title</th>"; 
-              echo "<th style='width:20%'>Rating</th>"; 
-              echo "<th style='width:40%'>Rate This Game</th>"; 
-              echo "</tr>";
-            while($row = $result->fetch_assoc()) {
-                echo "<tr class='spaceUnder'>";
-                echo "<td class='searchable'>" . $row["Game_Name"] . "</td>";
-                echo "<td class='searchable'>" . $row["Game_Rating"] . "/5</td>";
 
-              
-              echo "<td>      </td>";
-      
-                echo "</tr>";
-              }
-              echo "</table>";
-              echo "</form>";
-        }
-		
+        //handle form data, based on the value of the button press
+        $rdb_value = $_POST['rdb'];
+		echo $rdb_value;
         ?>
 
 <script>
