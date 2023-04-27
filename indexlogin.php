@@ -181,13 +181,13 @@ label {
               if ($x == 1) {
                 echo "<td><input type='checkbox' id=" . $row["Game_ID"] . " value=" . $row["Game_ID"] . " name='check_list[]' onclick='favoriteFunction()'><label for=" . $row["Game_ID"] . ">&#9829</label></td>";
               }
-              
-              echo "<td><button id='myBtn'>Rate This Game</button></td>";
+              echo "</form>";
+              echo "<td><button id='myBtn' onclick='favoriteFunction()'>Rate This Game</button></td>";
 
                 echo "</tr>";
               }
               echo "</table>";
-              echo "</form>";
+             
         }
 		
         ?>
