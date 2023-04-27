@@ -182,7 +182,10 @@ label {
                 echo "<td><input type='checkbox' id=" . $row["Game_ID"] . " value=" . $row["Game_ID"] . " name='check_list[]' onclick='favoriteFunction()'><label for=" . $row["Game_ID"] . ">&#9829</label></td>";
               }
               echo "</form>";
-              echo "<td><button id='myBtn' onclick='favoriteFunction()'>Rate This Game</button></td>";
+
+              echo "<form name='ratingform' class='ratingform' action='ratingPage.php' method='post'>";
+              echo "<td><button id='myBtn' value=" . $row["Game_ID"] . " onclick='ratingFunction()'>Rate This Game</button></td>";
+              echo "</form>";
 
                 echo "</tr>";
               }
@@ -195,6 +198,12 @@ label {
 <script>
   function favoriteFunction() {
     document.myform.submit();
+}
+</script>
+
+<script>
+  function ratingFunction() {
+    document.ratingform.submit();
 }
 </script>
 
