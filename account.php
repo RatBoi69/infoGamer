@@ -24,15 +24,15 @@
         $sql = "SELECT * from usersList WHERE User_ID=$identify";
         $result = $conn->query($sql);
 		
-		$sqlGame = "SELECT * from games";
-        $games = $conn->query($sqlGame);
+	//	$sqlGame = "SELECT * from games";
+  //      $games = $conn->query($sqlGame);
 		
-		$sqlFav = "SELECT * from favorites WHERE User_ID=$identify";
-		$favs = $conn->query($sqlFav);
+	//	$sqlFav = "SELECT * from favorites WHERE User_ID=$identify";
+	//	$favs = $conn->query($sqlFav);
 
         if ($result->num_rows == 1) {
             $row = $result->fetch_assoc(); 
-			$gameRow = $games->fetch_assoc(); 
+	//		$gameRow = $games->fetch_assoc(); 
         } else {
 
         }

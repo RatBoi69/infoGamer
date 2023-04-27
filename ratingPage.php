@@ -124,8 +124,14 @@ x.className = "topnav";
         <?php 
 
         //handle form data, based on the value of the button press
-        $rdb_value = $_POST['rdb'];
-		echo $rdb_value;
+        $gid = $_POST['rdb'];
+        $getGame = "SELECT * from ratings WHERE User_ID=$gid";
+        $targetGame = $conn->query($getGame);
+        
+
+
+
+
         ?>
 
 <script>
