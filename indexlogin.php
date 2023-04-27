@@ -155,7 +155,6 @@ label {
               echo "<th style='width:20%'>Genre</th>"; 
               echo "<th style='width:20%'>Rating</th>"; 
               echo "<th style='width:40%'>Favorite</th>"; 
-              echo "<th style='width:40%'>Rate This Game</th>"; 
               echo "</tr>";
             while($row = $result->fetch_assoc()) {
                 echo "<tr class='spaceUnder'>";
@@ -182,11 +181,12 @@ label {
                 echo "<td><input type='checkbox' id=" . $row["Game_ID"] . " value=" . $row["Game_ID"] . " name='check_list[]' onclick='favoriteFunction()'><label for=" . $row["Game_ID"] . ">&#9829</label></td>";
               }
 
-              echo "<td><button id='myBtn'>Rate This Game</button></td>";
+              
 
               
                              
                 echo "</tr>";
+                echo "<button id='myBtn'>Rate This Game</button>";
               }
               echo "</table>";
               echo "</form>";
