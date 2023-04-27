@@ -150,7 +150,8 @@ x.className = "topnav";
     overflow:hidden;
     white-space:nowrap;
     cursor:pointer;
-    font-size:30px;
+    text-align: center;
+    font-size:60px;
     color:#ccc;
 }
 .rate:not(:checked) > label:before {
