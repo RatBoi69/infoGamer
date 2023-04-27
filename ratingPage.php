@@ -135,8 +135,9 @@ x.className = "topnav";
         ?>
 <style>
 .rate {
+    text-align: center;
     float: left;
-    height: 46px;
+    height: 60px;
     padding: 0 10px;
 }
 .rate:not(:checked) > input {
