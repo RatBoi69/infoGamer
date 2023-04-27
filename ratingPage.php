@@ -127,12 +127,13 @@ x.className = "topnav";
 			
 		</header>
 
-
+ <!----------------------------------------------------------------------------------------------------->
         <?php 
 
         //handle form data, based on the value of the button press
         echo "<h1>Rate " . $row["Game_Name"] . "</h1>";
-
+        echo "<p><br><b>Description:</b> " . $row["Game_Info"] . "</br>";
+        echo "<p><br><b>Rating:</b> " . $row["Game_Rating"] . "</br>";
 
 
 
