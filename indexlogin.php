@@ -144,7 +144,7 @@ label {
 }
 </style>
         <?php 
-          
+          echo "<form name='myform' class='myform' action='checkAltered.php' method='post'>";
          if ($result->num_rows > 0) {
               echo "<table id='gameTable' style='width:75%' class='center'>"; 
               echo "<tr class='spaceAbove'>"; 
@@ -165,7 +165,6 @@ label {
                 echo "<td class='searchable'>" . $row["Game_Genre"] . "</td>";
                 echo "<td class='searchable'>" . $row["Game_Rating"] . "/5</td>";
 
-                echo "<form name='myform' class='myform' action='checkAltered.php' method='post'>";
               $x = 1;
               mysqli_data_seek($favs, 0);
               if ($favs->num_rows == 0) {
@@ -181,12 +180,11 @@ label {
               if ($x == 1) {
                 echo "<td><input type='checkbox' id=" . $row["Game_ID"] . " value=" . $row["Game_ID"] . " name='check_list[]' onclick='favoriteFunction()'><label for=" . $row["Game_ID"] . ">&#9829</label></td>";
               }
-              echo "</form>";
       
                 echo "</tr>";
               }
               echo "</table>";
-              
+              echo "</form>";
         }
 		
         ?>
