@@ -155,6 +155,7 @@ label {
               echo "<th style='width:20%'>Genre</th>"; 
               echo "<th style='width:20%'>Rating</th>"; 
               echo "<th style='width:40%'>Favorite</th>"; 
+              echo "<th style='width:40%'>Rate This Game</th>"; 
               echo "</tr>";
             while($row = $result->fetch_assoc()) {
                 echo "<tr class='spaceUnder'>";
@@ -180,6 +181,10 @@ label {
               if ($x == 1) {
                 echo "<td><input type='checkbox' id=" . $row["Game_ID"] . " value=" . $row["Game_ID"] . " name='check_list[]' onclick='favoriteFunction()'><label for=" . $row["Game_ID"] . ">&#9829</label></td>";
               }
+
+              echo "<button id='myBtn'>Rate This Game</button></td>";
+
+              
                              
                 echo "</tr>";
               }
@@ -188,6 +193,46 @@ label {
         }
 		
         ?>
+
+<div id="myModal" class="modal">
+
+  <!-- Modal content -->
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <p>Some text in the Modal..</p>
+  </div>
+
+</div>
+
+<script>
+// Get the modal
+var modal = document.getElementById("myModal");
+
+// Get the button that opens the modal
+var btn = document.getElementById("myBtn");
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks the button, open the modal 
+btn.onclick = function() {
+  modal.style.display = "block";
+}
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+  modal.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+</script>
+
+
 
 <script>
   function favoriteFunction() {
