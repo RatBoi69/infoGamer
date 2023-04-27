@@ -148,12 +148,13 @@ label {
          if ($result->num_rows > 0) {
               echo "<table id='gameTable' style='width:75%' class='center'>"; 
               echo "<tr class='spaceAbove'>"; 
-              echo "<th style='width:20%'>Game Title</th>"; 
-              echo "<th style='width:50%'>Game Info</th>"; 
-              echo "<th style='width:20%'>Game Cost</th>"; 
+              echo "<th style='width:20%'>Title</th>"; 
+              echo "<th style='width:50%'>Description</th>"; 
+              echo "<th style='width:20%'>Cost</th>"; 
               echo "<th style='width:10%'>Number of Players</th>"; 
-              echo "<th style='width:20%'>Game Genre</th>"; 
-              echo "<th style='width:40%'> Favorite </th>"; 
+              echo "<th style='width:20%'>Genre</th>"; 
+              echo "<th style='width:20%'>Rating</th>"; 
+              echo "<th style='width:40%'>Favorite</th>"; 
               echo "</tr>";
             while($row = $result->fetch_assoc()) {
                 echo "<tr class='spaceUnder'>";
@@ -162,7 +163,7 @@ label {
                 echo "<td class='searchable'>" . $row["Game_Cost"] . "</td>";
                 echo "<td class='searchable'>" . $row["Num_of_Players"] . "</td>";
                 echo "<td class='searchable'>" . $row["Game_Genre"] . "</td>";
-               
+                echo "<td class='searchable'>" . $row["Game_Rating"] . "/5</td>";
 
               $x = 1;
               mysqli_data_seek($favs, 0);
