@@ -23,35 +23,26 @@
     $identify = $_COOKIE[$cookie_name];
     $gid = $_POST['hiddenVal'];
 
-    echo $gid;
 
     $delRate = "DELETE FROM ratings WHERE User_ID=$identify and Game_ID=$gid";
     $conn->query($delRate);
-    echo $_POST['rate'];
-    echo $_POST['rate'];
-    echo $_POST['rate'];
-    echo $_POST['rate'];
-    echo $_POST['rate'];
+
 //determine their rating
+$rating = $_POST['rate'];
 
+    $submitRating = "INSERT INTO ratings (User_ID, Game_ID, rating) VALUES ($identify, $gid, $rating)";
+    $conn->query($submitRating);
 
-
-    $sql = "INSERT INTO ratings (User_ID, Game_ID, rating) VALUES ($identify, $gid, 0)";
-
-    $sql = "SELECT * from ratings WHERE Game_ID=$gid";
-
-       // if ($result->num_rows == 1) {
-       //     $row = $result->fetch_assoc(); 
-       // }
-
-
-
-
-
-
-
-
-
+    $getAllRates = "SELECT * from ratings WHERE Game_ID=$gid";
+    $x = 0;
+    $result = $conn->query($submitRating);
+        if ($result->num_rows > 0) {
+            while($row = $result->fetch_assoc()) {
+                $x += $row['rating'];
+            }
+            $x = $x / $result->num_rows;
+       } 
+       echo $x;
 
     //header('Location: indexLogin.php');
 ?>
