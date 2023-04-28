@@ -35,7 +35,7 @@ $rating = $_POST['rate'];
 
     $getAllRates = "SELECT * from ratings WHERE Game_ID=$gid";
     $x = 0;
-    $result = $conn->query($submitRating);
+    $result = $conn->query($getAllRates);
         if ($result->num_rows > 0) {
             while($row = $result->fetch_assoc()) {
                 $x += $row['rating'];
