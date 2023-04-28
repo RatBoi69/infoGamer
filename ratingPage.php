@@ -131,11 +131,7 @@ x.className = "topnav";
         <?php 
         echo "<h1>Rate " . $row["Game_Name"] . "</h1>";
         echo "<p><br><b>Description:</b> " . $row["Game_Info"] . "</br>";
-        echo "<p><br><b>Overall Rating:</b> " . $row["Game_Rating"] . "</br>";
-
-
         if ($row["Game_Rating"] == 0) {
-            echo "<td class='searchable'>-/5</td>";
             echo "<p><br><b>Overall Rating:</b>-/5</br>";
           } else {
             echo "<p><br><b>Overall Rating:</b> " . $row["Game_Rating"] . "/5</br>";
