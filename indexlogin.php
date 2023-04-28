@@ -162,9 +162,9 @@ label {
               echo "<th style='width:10%'></th>"; 
               echo "<th style='width:20%'>Rating</th>"; 
               echo "<th style='width:10%'></th>"; 
-              echo "<th style='width:40%'>Favorite</th>"; 
+              echo "<th style='width:40%'>  Favorite</th>"; 
               echo "<th style='width:10%'></th>"; 
-              echo "<th style='width:40%'>Rate This Game</th>"; 
+              echo "<th style='width:40%'>  Rate This Game</th>"; 
               echo "</tr>";
             while($row = $result->fetch_assoc()) {
                 echo "<tr class='spaceUnder'>";
