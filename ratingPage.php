@@ -30,8 +30,11 @@
             $row = $targetGame->fetch_assoc(); 
         }
 
-  $sqlRate = "SELECT * from ratings WHERE User_ID=$identify";
+  $sqlRate = "SELECT * from ratings WHERE User_ID=$identify and Game_ID=$gid";
   $rates = $conn->query($sqlRate);
+  $row = $rates->fetch_assoc();
+  $currentUserRate = $row['rating'];
+   
 ?>  
 
 <html>
@@ -184,17 +187,21 @@ x.className = "topnav";
 <div class="rate">
     <?php 
         echo "<input type='hidden' name='hiddenVal' value=" . $row["Game_ID"] . ">";
+        if ($currentUserRate == 0) {
+            echo "<input type='radio' id='star5' name='rate' value='5' onclick='ratingFunction()'/>";
+            echo "<label for='star5' title='5'>5 stars</label>";
+            echo "<input type='radio' id='star4' name='rate' value='4' onclick='ratingFunction()'/>";
+            echo "<label for='star4' title='4'>4 stars</label>";
+            echo "<input type='radio' id='star3' name='rate' value='3' onclick='ratingFunction()'/>";
+            echo "<label for='star3' title='3'>3 stars</label>";
+            echo "<input type='radio' id='star2' name='rate' value='2' onclick='ratingFunction()'/>";
+            echo "<label for='star2' title='2'>2 stars</label>";
+            echo "<input type='radio' id='star1' name='rate' value='1' onclick='ratingFunction()'/>";
+            echo "<label for='star1' title='1'>1 stars</label>";
+        } 
+
     ?>
-    <input type="radio" id="star5" name="rate" value="5" onclick="ratingFunction()"/>
-    <label for="star5" title="text">5 stars</label>
-    <input type="radio" id="star4" name="rate" value="4" onclick="ratingFunction()"/>
-    <label for="star4" title="text">4 stars</label>
-    <input type="radio" id="star3" name="rate" value="3" onclick="ratingFunction()"/>
-    <label for="star3" title="text">3 stars</label>
-    <input type="radio" id="star2" name="rate" value="2" onclick="ratingFunction()"/>
-    <label for="star2" title="text">2 stars</label>
-    <input type="radio" id="star1" name="rate" value="1" onclick="ratingFunction()"/>
-    <label for="star1" title="text">1 star</label>
+
   </div>
 </form>
 
