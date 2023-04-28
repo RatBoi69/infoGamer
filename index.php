@@ -74,7 +74,7 @@ function myFunction() {
         <?php 
 		
          if ($result->num_rows > 0) {
-              echo "<table id='gameTable' style='width:75%' class='center'>"; 
+              echo "<table id='gameTable' style='width:80%' class='center'>"; 
               echo "<tr class='spaceAbove'>"; 
               echo "<th style='width:20%'>Title</th>"; 
               echo "<th style='width:50%'>Description</th>"; 
