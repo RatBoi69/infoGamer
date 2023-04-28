@@ -32,8 +32,8 @@
 
   $sqlRate = "SELECT * from ratings WHERE User_ID=$identify and Game_ID=$gid";
   $rates = $conn->query($sqlRate);
-  $row = $rates->fetch_assoc();
-  $currentUserRate = $row['rating'];
+  $rateRow = $rates->fetch_assoc();
+  $currentUserRate = $rateRow['rating'];
    
 ?>  
 
