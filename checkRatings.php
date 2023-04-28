@@ -23,5 +23,15 @@
     $identify = $_COOKIE[$cookie_name];
         
     
-    header('Location: indexlogin.php');
+
+
+
+
+
+
+
+
+
+
+    header('Location: ratingPage.php');
 ?>
