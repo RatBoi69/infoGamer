@@ -179,7 +179,7 @@ x.className = "topnav";
 <form name='myform' class='myform' action='checkRatings.php' method='post'>
 <div class="rate">
 <?php 
-       echo "<input type='hidden' name='hiddenVal' value=" . $row["Game_ID"] . "/>";
+       echo "<input type='hidden' name='hiddenVal' value=" . $row["Game_ID"] . ">";
 
         ?>
     <input type="radio" id="star5" name="rate" value="5" onclick="ratingFunction()"/>
