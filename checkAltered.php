@@ -15,21 +15,29 @@
         die("Connection failed: " . $conn->connect_error);
     }
 
-    $cookie_name = "ArcadeLegacyUID";
-    if(!isset($_COOKIE[$cookie_name])) {
-        header('Location: login.php');
-        $conn->close();
-    }
-    $identify = $_COOKIE[$cookie_name];
-        
-    $sql = "DELETE FROM favorites WHERE User_ID=$identify";
+    // This code checks if a specific cookie is set. If not, it redirects the user to the login page and closes the database connection.
+$cookie_name = "ArcadeLegacyUID";
+if(!isset($_COOKIE[$cookie_name])) {
+    header('Location: login.php');
+    $conn->close();
+}
+
+// This code retrieves the user ID from the cookie.
+$identify = $_COOKIE[$cookie_name];
+
+// This code deletes all the user's favorites from the database.
+$sql = "DELETE FROM favorites WHERE User_ID=$identify";
+$conn->query($sql);
+
+// This code retrieves the list of games the user wants to add to their favorites, and inserts them into the database.
+if(!empty($_POST['check_list'])){
+    $game = $_POST['check_list'];
+    foreach($game as $check_list){
+        $sql = "INSERT INTO favorites (User_ID, Game_ID) VALUES ($identify, $check_list)";
         $conn->query($sql);
-        if(!empty($_POST['check_list'])){
-            $game = $_POST['check_list'];
-            foreach($game as $check_list){
-                $sql = "INSERT INTO favorites (User_ID, Game_ID) VALUES ($identify, $check_list)";
-                $conn->query($sql);
-            }
-        }
-    header('Location: indexlogin.php');
+    }
+}
+
+// This code redirects the user to the homepage with their updated favorites list.
+header('Location: indexlogin.php');
 ?>
