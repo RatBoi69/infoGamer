@@ -187,18 +187,41 @@ x.className = "topnav";
 <div class="rate">
     <?php 
         echo "<input type='hidden' name='hiddenVal' value=" . $row["Game_ID"] . ">";
-        if ($currentUserRate == 0) {
+        if ($currentUserRate == 5) {
+            echo "<input type='radio' id='star5' name='rate' value='5' onclick='ratingFunction()' checked/>";
+            echo "<label for='star5' title='5'>5 stars</label>";
+        } else {
             echo "<input type='radio' id='star5' name='rate' value='5' onclick='ratingFunction()'/>";
             echo "<label for='star5' title='5'>5 stars</label>";
+        }
+        if ($currentUserRate == 4) {
+            echo "<input type='radio' id='star4' name='rate' value='4' onclick='ratingFunction()' checked/>";
+            echo "<label for='star4' title='4'>4 stars</label>";
+        } else {
             echo "<input type='radio' id='star4' name='rate' value='4' onclick='ratingFunction()'/>";
             echo "<label for='star4' title='4'>4 stars</label>";
+        }
+        if ($currentUserRate == 3) {
+            echo "<input type='radio' id='star3' name='rate' value='3' onclick='ratingFunction()' checked/>";
+            echo "<label for='star3' title='3'>3 stars</label>";
+        } else {
             echo "<input type='radio' id='star3' name='rate' value='3' onclick='ratingFunction()'/>";
             echo "<label for='star3' title='3'>3 stars</label>";
+        }
+        if ($currentUserRate == 2) {
+            echo "<input type='radio' id='star2' name='rate' value='2' onclick='ratingFunction()' rating/>";
+            echo "<label for='star2' title='2'>2 stars</label>";
+        } else {
             echo "<input type='radio' id='star2' name='rate' value='2' onclick='ratingFunction()'/>";
             echo "<label for='star2' title='2'>2 stars</label>";
+        }
+        if ($currentUserRate == 1) {
+            echo "<input type='radio' id='star1' name='rate' value='1' onclick='ratingFunction()' checked/>";
+            echo "<label for='star1' title='1'>1 stars</label>";
+        } else {
             echo "<input type='radio' id='star1' name='rate' value='1' onclick='ratingFunction()'/>";
             echo "<label for='star1' title='1'>1 stars</label>";
-        } 
+        }
 
     ?>
 
