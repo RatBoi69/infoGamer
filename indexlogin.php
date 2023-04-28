@@ -148,24 +148,20 @@ label {
         <?php 
           echo "<form name='myform' class='myform' action='checkAltered.php' method='post'>";
          if ($result->num_rows > 0) {
-              echo "<table id='gameTable' style='width:99%' class='center'>"; 
-              echo "<tr class='spaceAbove'>"; 
-              echo "<th style='width:20%'>Title</th>"; 
-              echo "<th style='width:10%'></th>"; 
-              echo "<th style='width:50%'>Description</th>"; 
-              echo "<th style='width:10%'></th>"; 
-              echo "<th style='width:20%'>Cost</th>"; 
-              echo "<th style='width:10%'></th>"; 
-              echo "<th style='width:10%'>Number of Players</th>"; 
-              echo "<th style='width:10%'></th>"; 
-              echo "<th style='width:20%'>Genre</th>"; 
-              echo "<th style='width:10%'></th>"; 
-              echo "<th style='width:20%'>Rating</th>"; 
-              echo "<th style='width:10%'></th>"; 
-              echo "<th style='width:40%'>  Favorite</th>"; 
-              echo "<th style='width:10%'></th>"; 
-              echo "<th style='width:40%'>  Rate This Game</th>"; 
-              echo "</tr>";
+          echo "<table id='gameTable' style='width:90%' class='center'>"; 
+          echo "<tr class='spaceAbove'>"; 
+          echo "<th style='width:10%'>Game Title</th>"; 
+          echo "<th style='width:1%'></th>"; //blank
+          echo "<th style='width:20%'>Game Info</th>"; 
+          echo "<th style='width:1%'></th>"; //blank
+          echo "<th style='width:10%'>Game Cost</th>"; 
+          echo "<th style='width:1%'></th>"; //blank
+          echo "<th style='width:10%'>Number of Players</th>"; 
+          echo "<th style='width:1%'></th>"; //blank
+          echo "<th style='width:10%'>Game Genre</th>"; 
+          echo "<th style='width:1%'></th>"; //blank
+          echo "<th style='width:10%'> Favorite </th>"; 
+          echo "</tr>";
             while($row = $result->fetch_assoc()) {
                 echo "<tr class='spaceUnder'>";
                 echo "<td class='searchable'>" . $row["Game_Name"] . "</td>";
