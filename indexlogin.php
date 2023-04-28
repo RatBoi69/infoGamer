@@ -151,27 +151,40 @@ label {
               echo "<table id='gameTable' style='width:90%' class='center'>"; 
               echo "<tr class='spaceAbove'>"; 
               echo "<th style='width:20%'>Title</th>"; 
+              echo "<th style='width:10%'></th>"; 
               echo "<th style='width:50%'>Description</th>"; 
+              echo "<th style='width:10%'></th>"; 
               echo "<th style='width:20%'>Cost</th>"; 
+              echo "<th style='width:10%'></th>"; 
               echo "<th style='width:10%'>Number of Players</th>"; 
+              echo "<th style='width:10%'></th>"; 
               echo "<th style='width:20%'>Genre</th>"; 
+              echo "<th style='width:10%'></th>"; 
               echo "<th style='width:20%'>Rating</th>"; 
+              echo "<th style='width:10%'></th>"; 
               echo "<th style='width:40%'>Favorite</th>"; 
+              echo "<th style='width:10%'></th>"; 
               echo "<th style='width:40%'>Rate This Game</th>"; 
               echo "</tr>";
             while($row = $result->fetch_assoc()) {
                 echo "<tr class='spaceUnder'>";
                 echo "<td class='searchable'>" . $row["Game_Name"] . "</td>";
+                echo "<td style='width:10%'></td>"; 
                 echo "<td>" . $row["Game_Info"] . "</td>";
+                echo "<td style='width:10%'></td>"; 
                 echo "<td class='searchable'>" . $row["Game_Cost"] . "</td>";
+                echo "<td style='width:10%'></td>"; 
                 echo "<td class='searchable'>" . $row["Num_of_Players"] . "</td>";
+                echo "<td style='width:10%'></td>"; 
                 echo "<td class='searchable'>" . $row["Game_Genre"] . "</td>";
+                echo "<td style='width:10%'></td>"; 
 
                 if ($row["Game_Rating"] == 0) {
                   echo "<td class='searchable'>-/5</td>";
                 } else {
                   echo "<td class='searchable'>" . $row["Game_Rating"] . "/5</td>";
                 }
+                echo "<td style='width:10%'></td>"; 
                 
               $x = 1;
               mysqli_data_seek($favs, 0);
@@ -188,6 +201,7 @@ label {
               if ($x == 1) {
                 echo "<td><input type='checkbox' id=" . $row["Game_ID"] . " value=" . $row["Game_ID"] . " name='check_list[]' onclick='favoriteFunction()'><label for=" . $row["Game_ID"] . ">&#9829</label></td>";
               }
+              echo "<td style='width:10%'></td>"; 
               echo "</form>";
 
               echo "<form name='ratingform' class='ratingform' action='ratingPage.php' method='post'>";
