@@ -164,7 +164,12 @@ label {
                 echo "<td class='searchable'>" . $row["Game_Cost"] . "</td>";
                 echo "<td class='searchable'>" . $row["Num_of_Players"] . "</td>";
                 echo "<td class='searchable'>" . $row["Game_Genre"] . "</td>";
-                echo "<td class='searchable'>" . $row["Game_Rating"] . "/5</td>";
+
+                if ($row["Game_Rating"] == 0) {
+                  echo "<td class='searchable'>-/5</td>";
+                } else {
+                  echo "<td class='searchable'>" . $row["Game_Rating"] . "/5</td>";
+                }
                 
               $x = 1;
               mysqli_data_seek($favs, 0);

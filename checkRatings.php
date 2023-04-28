@@ -25,16 +25,27 @@
 
     echo $gid;
 
-   // $delRate = "DELETE FROM ratings WHERE User_ID=$identify and Game_ID=$gid";
-  //  $conn->query($delRate);
+    $delRate = "DELETE FROM ratings WHERE User_ID=$identify and Game_ID=$gid";
+    $conn->query($delRate);
+
+//determine their rating
+if(!empty($_POST['rate'])){
+    $rating = $_POST['rate'];
+    foreach($rating as $rate){
+        echo $rating;
+        //$sql = "INSERT INTO favorites (User_ID, Game_ID) VALUES ($identify, $check_list)";
+        //$conn->query($sql);
+    }
+}
 
 
-  //  $sql = "SELECT * from usersList WHERE User_ID=$identify";
-   //     $result = $conn->query($sql);
+    $sql = "INSERT INTO ratings (User_ID, Game_ID, rating) VALUES ($identify, $gid, 0)";
 
-   //     if ($result->num_rows == 1) {
-   //         $row = $result->fetch_assoc(); 
-   //     }
+    $sql = "SELECT * from ratings WHERE Game_ID=$gid";
+
+       // if ($result->num_rows == 1) {
+       //     $row = $result->fetch_assoc(); 
+       // }
 
 
 

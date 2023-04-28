@@ -132,6 +132,14 @@ x.className = "topnav";
         echo "<h1>Rate " . $row["Game_Name"] . "</h1>";
         echo "<p><br><b>Description:</b> " . $row["Game_Info"] . "</br>";
         echo "<p><br><b>Overall Rating:</b> " . $row["Game_Rating"] . "</br>";
+
+
+        if ($row["Game_Rating"] == 0) {
+            echo "<td class='searchable'>-/5</td>";
+            echo "<p><br><b>Overall Rating:</b>-/5</br>";
+          } else {
+            echo "<p><br><b>Overall Rating:</b> " . $row["Game_Rating"] . "/5</br>";
+          }
         ?>
 
 <!-----------need to cite------------------->
@@ -178,10 +186,9 @@ x.className = "topnav";
 
 <form name='myform' class='myform' action='checkRatings.php' method='post'>
 <div class="rate">
-<?php 
-       echo "<input type='hidden' name='hiddenVal' value=" . $row["Game_ID"] . ">";
-
-        ?>
+    <?php 
+        echo "<input type='hidden' name='hiddenVal' value=" . $row["Game_ID"] . ">";
+    ?>
     <input type="radio" id="star5" name="rate" value="5" onclick="ratingFunction()"/>
     <label for="star5" title="text">5 stars</label>
     <input type="radio" id="star4" name="rate" value="4" onclick="ratingFunction()"/>
