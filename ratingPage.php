@@ -212,7 +212,7 @@ x.className = "topnav";
             echo "<label for='star3' title='3'>3 stars</label>";
         }
         if ($currentUserRate == 2) {
-            echo "<input type='radio' id='star2' name='rate' value='2' onclick='ratingFunction()' rating/>";
+            echo "<input type='radio' id='star2' name='rate' value='2' onclick='ratingFunction()' checked/>";
             echo "<label for='star2' title='2'>2 stars</label>";
         } else {
             echo "<input type='radio' id='star2' name='rate' value='2' onclick='ratingFunction()'/>";
