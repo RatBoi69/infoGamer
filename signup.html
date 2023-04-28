@@ -1,17 +1,19 @@
 <!DOCTYPE html>
 <html>
-	<head><link href="css/main.css" type="text/css" rel="stylesheet">
-		<title>InfoGamer</title>
+	<head>
+		<link href="css/main.css" type="text/css" rel="stylesheet"> <!-- link to external CSS file -->
+		<title>InfoGamer</title> <!-- title of the page -->
 		<script>
-function myFunction() {
-  var x = document.getElementById("myTopnav");
-  if (x.className === "topnav") {
-    x.className += " responsive";
-  } else {
-    x.className = "topnav";
-  }
-}
-</script>
+			// script for responsive navigation menu
+			function myFunction() {
+				var x = document.getElementById("myTopnav");
+				if (x.className === "topnav") {
+					x.className += " responsive";
+				} else {
+					x.className = "topnav";
+				}
+			}
+		</script>
 	</head>
 	<body>
 		<header>
@@ -30,30 +32,19 @@ function myFunction() {
 		</nav>
 			
 		</header>
-    <h1>Sign Up</h1>
-<div id="id01" class="modal">
-
-    <div class="container">
-
-      <form action="signup.php" method="post">
-        
-        <label for="email"><b>E-Mail</b></label>
-      <input type="email" placeholder="Enter Email" name="email" required>
-
-      <label for="uname"><b>Create Username</b></label>
-      <input type="username" placeholder="Create Username" name="uname" required>
-
-      <label for="psw"><b>Create Password</b></label>
-      <input type="password" placeholder="Create Password" name="psw" required>
-        
-      <button type="submit">Sign Up</button>
-    </form>
-      
-    </div>
-
-  
-</div>
-
-
-</body>
+		<h1>Sign Up</h1> <!-- title of the section -->
+		<div id="id01" class="modal">
+			<div class="container">
+				<form action="signup.php" method="post"> <!-- form to sign up -->
+					<label for="email"><b>E-Mail</b></label> <!-- label for email input field -->
+					<input type="email" placeholder="Enter Email" name="email" required> <!-- email input field -->
+					<label for="uname"><b>Create Username</b></label> <!-- label for username input field -->
+					<input type="username" placeholder="Create Username" name="uname" required> <!-- username input field -->
+					<label for="psw"><b>Create Password</b></label> <!-- label for password input field -->
+					<input type="password" placeholder="Create Password" name="psw" required> <!-- password input field -->
+					<button type="submit">Sign Up</button> <!-- submit button to sign up -->
+				</form>
+			</div>
+		</div>
+	</body>
 </html>
