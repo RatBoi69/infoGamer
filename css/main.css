@@ -88,7 +88,6 @@ img.avatar {
 input[type=text] {
 	width: 100%;
 	padding: 12px 20px;
- 
 	display: inline-block;
 	box-sizing: border-box;
     border: 1px solid #ccc;
@@ -164,6 +163,7 @@ span.psw {
     text-align: center;
     font-size: 48px;
     font-weight: 700;
+    margin-bottom: 5px;
   }
   h3 {
     color: white;
