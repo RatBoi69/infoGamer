@@ -195,13 +195,6 @@ x.className = "topnav";
   function ratingFunction() {
     document.myform.submit();
 }
-
-
-<form name='myform' class='myform' action='checkRatings.php' method='post'>
-</form>
-
-
-
 </script>
 
 
