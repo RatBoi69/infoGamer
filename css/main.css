@@ -163,7 +163,8 @@ span.psw {
     text-align: center;
     font-size: 48px;
     font-weight: 700;
-    margin-bottom: 0px;
+    
+    height: 0%;
   }
   h3 {
     color: white;
