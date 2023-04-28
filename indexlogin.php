@@ -123,7 +123,8 @@ x.className = "topnav";
 			
 		</header>
 
-<input type="text" id="getGame" onkeyup="searchFunction()" placeholder="Search Bar">
+<input type="text" id="getGame" onkeyup="searchFunction()" placeholder="Search">
+<h1>Search Available Games</h1>
 
 
 <style>

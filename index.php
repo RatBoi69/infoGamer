@@ -68,9 +68,10 @@ function myFunction() {
 			
 		</header>
 
-<input type="text" id="getGame" onkeyup="searchFunction()" placeholder="Search Bar">
 
+<input type="text" id="getGame" onkeyup="searchFunction()" placeholder="Search">
 
+<h1>Search Available Games</h1>
         <?php 
 		
          if ($result->num_rows > 0) {
