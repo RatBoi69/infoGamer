@@ -160,7 +160,7 @@
         echo "<tr class='spaceAbove'>"; 
         echo "<th style='width:10%'>Title</th>"; 
         echo "<th style='width:1%'></th>"; //blank
-        echo "<th style='width:20%'>Description</th>"; 
+        echo "<th style='width:23%'>Description</th>"; 
         echo "<th style='width:1%'></th>"; //blank
         echo "<th style='width:10%'>Cost</th>"; 
         echo "<th style='width:1%'></th>"; //blank
