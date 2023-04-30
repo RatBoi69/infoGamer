@@ -237,33 +237,5 @@
 			}
 		</script>
 
-		<!-- JS for the search functionality without refresh
-		<script>
-			function searchFunction(String s) {
-			// Declare starting variables
-			var input = document.getElementById("getGame");
-			var filter = input.value.toUpperCase();
-			var table = document.getElementById("gameTable");
-			var trs = table.tBodies[0].getElementsByClassName("spaceUnder");
-			// Loop through rows
-			for (var i = 0; i < trs.length; i++) {
-			// Define the cells
-			var tds = trs[i].getElementsByClassName(s);
-			// hide the row
-			trs[i].style.display = "none";
-			// loop through row cells
-			for (var i2 = 0; i2 < tds.length; i2++) {
-			// if there's a match
-			if (tds[i2].innerHTML.toUpperCase().indexOf(filter) > -1) {
-			// show the row
-			trs[i].style.display = "";
-			// skip to the next row
-			continue;
-			}
-			}
-			}
-			}
-		</script>
-			 -->
 	</body>
 </html>
