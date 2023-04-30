@@ -160,7 +160,7 @@
         echo "<tr class='spaceAbove'>"; 
         echo "<th style='width:10%'>Title</th>"; 
         echo "<th style='width:1%'></th>"; //blank
-        echo "<th style='width:23%'>Description</th>"; 
+        echo "<th style='width:33%'>Description</th>"; 
         echo "<th style='width:1%'></th>"; //blank
         echo "<th style='width:10%'>Cost</th>"; 
         echo "<th style='width:1%'></th>"; //blank
@@ -168,9 +168,9 @@
         echo "<th style='width:1%'></th>"; //blank
         echo "<th style='width:10%'>Genre</th>"; 
         echo "<th style='width:1%'></th>"; //blank
-        echo "<th style='width:10%'>Rating</th>"; 
+        echo "<th style='width:5%'>Rating</th>"; 
         echo "<th style='width:1%'></th>"; //blank
-        echo "<th style='width:10%'>Favorite</th>"; 
+        echo "<th style='width:5%'>Favorite</th>"; 
         echo "<th style='width:1%'></th>"; //blank
         echo "<th style='width:10%'>Rate It</th>"; 
         echo "</tr>";
