@@ -128,6 +128,7 @@
     <?php
       // displaying user data
       echo "<h1>Welcome, " . $row["Username"] . "!</h1>";
+      echo "<br></br>";
       echo "<p><br><b>Your username is: " . $row["Username"] . "</b></br>";
       echo "<br><b>Your email is: " . $row["Email"] . "</b></br></p>";
       echo "<tr class='spaceUnder'>";

@@ -23,7 +23,7 @@ display: inline-block;
 a:hover, a:active, button:hover {
 background-color: #00DBFF;
 }
-/* Login Button */
+/* Login Button 
 button {
 background-color: #7b02c6;
 font-weight: 900;
@@ -35,6 +35,8 @@ cursor: pointer;
 width: 96%;
 height: 50px;
 }
+
+*/
 button {
 background-color: rgb(10, 16, 28);
 color: white;
