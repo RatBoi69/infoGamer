@@ -159,20 +159,20 @@
         echo "<table id='gameTable' style='width:90%' class='center'>"; 
         echo "<tr class='spaceAbove'>"; 
         echo "<th style='width:10%'>Title</th>"; 
-        echo "<th style='width:1%'></th>"; //blank
+        echo "<th style='width:2%'></th>"; //blank
         echo "<th style='width:33%'>Description</th>"; 
-        echo "<th style='width:1%'></th>"; //blank
-        echo "<th style='width:10%'>Cost</th>"; 
-        echo "<th style='width:1%'></th>"; //blank
-        echo "<th style='width:10%'>Number of Players</th>"; 
-        echo "<th style='width:1%'></th>"; //blank
+        echo "<th style='width:2%'></th>"; //blank
+        echo "<th style='width:7%'>Cost</th>"; 
+        echo "<th style='width:2%'></th>"; //blank
+        echo "<th style='width:7%'>Number of Players</th>"; 
+        echo "<th style='width:2%'></th>"; //blank
         echo "<th style='width:10%'>Genre</th>"; 
-        echo "<th style='width:1%'></th>"; //blank
+        echo "<th style='width:2%'></th>"; //blank
         echo "<th style='width:5%'>Rating</th>"; 
-        echo "<th style='width:1%'></th>"; //blank
+        echo "<th style='width:2%'></th>"; //blank
         echo "<th style='width:5%'>Favorite</th>"; 
-        echo "<th style='width:1%'></th>"; //blank
-        echo "<th style='width:10%'>Rate It</th>"; 
+        echo "<th style='width:2%'></th>"; //blank
+        echo "<th style='width:9%'>Rate It</th>"; 
         echo "</tr>";
         while($row = $result->fetch_assoc()) {
           echo "<tr class='spaceUnder'>";
