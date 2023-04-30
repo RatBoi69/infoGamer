@@ -1,3 +1,7 @@
+<!-- A PHP file to check what rating a user has given a game and update the database accordingly
+     Copyright: 2023
+-->
+
 <?php
     // displaying any errors
     ini_set('display_errors', 1); 

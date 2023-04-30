@@ -1,3 +1,7 @@
+<!-- A PHP file to check which games a user has and hasnt favorited and update the database accordingly (on the favorites page)
+     Copyright: 2023
+-->
+
 <?php
     // These lines turn on error reporting to help with debugging.
     ini_set('display_errors', 1); 
