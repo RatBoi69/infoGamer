@@ -139,6 +139,7 @@
 
     <?php 
       echo "<h1>Rate " . $row["Game_Name"] . "</h1>";
+      echo "<br></br>";
       echo "<p><br><b>Description:</b> " . $row["Game_Info"] . "</br>";
       if ($row["Game_Rating"] == 0) {
         echo "<p><br><b>Overall Rating: </b>-/5</br>";
