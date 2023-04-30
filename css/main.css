@@ -18,172 +18,126 @@ input[type=username], input[type=password], input[type=email] {
   box-sizing: border-box;
 }
 
-/* Set a style for all buttons 
-button {
-  background-color: #7b02c6;
-
-  font-weight: 900;
-  color: #1e1e1e;
-  padding: 5px 50px;
-  margin: 8px 0;
-  border: none;
-  cursor: pointer;
-  width: 96%;
-  height: 50px;
-}
-
-h2 {
-color: #7b02c6;
-text-align: center;
-font-weight: 900;
-}
-*/
 /* Table */
 th, td {
-color: white;
-padding: 40px 0px;
-text-align: center;
+  color: white;
+  padding: 40px 0px;
+  text-align: center;
 }
+
 table {
-width: 75%;
-text-align: center;
+  width: 75%;
+  text-align: center;
 }
+
 ol, li {
-color: white;
-font-size: 30px;
+  color: white;
+  font-size: 30px;
 }
+
 td.img {
-width: 300;
-height: 375;
-
+  width: 300;
+  height: 375;
 }
+
 tr.spaceUnder>td {
-padding-bottom: 1em;
-padding-top: 1em;
+  padding-bottom: 1em;
+  padding-top: 1em;
 }
+
 .center {
-margin-left: auto;
-margin-right: auto;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-
-/* Extra styles for the cancel button 
-.cancelbtn {
-width: auto;
-padding: 10px 18px;
-background-color: #f44336;
-}
-*/
 /* Center the image and position the close button */
 .imgcontainer {
-text-align: center;
-margin: 24px 0 12px 0;
-position: relative;
+  text-align: center;
+  margin: 24px 0 12px 0;
+  position: relative;
 }
 
 img.avatar {
-width: 40%;
-border-radius: 50%;
+  width: 40%;
+  border-radius: 50%;
 }
 
 .links {
-font-weight: 900;
+  font-weight: 900;
 }
 
 input[type=text] {
-width: 100%;
-padding: 12px 20px;
-display: inline-block;
-box-sizing: border-box;
-border: 1px solid #ccc;
-display: block;
-margin-left: auto;
-margin-right: auto;
-margin-top: 5%;
-text-align: center;
-width: 50%;
+  width: 100%;
+  padding: 12px 20px;
+  display: inline-block;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 5%;
+  text-align: center;
+  width: 50%;
 }
 
 .container {
-padding: 16px;
+  padding: 16px;
 }
 
 span.psw {
-float: right;
-padding-top: 16px;
+  float: right;
+  padding-top: 16px;
 }
 
-/* The Modal (background) 
-.modal {
-color: rgb(25, 158, 207);
-}
-
-/* Modal Content/Box 
-.modal-content {
-color: rgb(251, 235, 27);
-margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered 
-border: 1px solid #888;
-width: 80%; /* Could be more or less, depending on screen size 
-}
-
-/* Change styles for span and cancel button on extra small screens 
-@media screen and (max-width: 300px) {
-span.psw {
-display: block;
-float: none;
-}
-.cancelbtn {
-width: 100%;
-}
-}
-*/
 header {
-background-color: rgb(25, 158, 207);
-color: white;
+  background-color: rgb(25, 158, 207);
+  color: white;
 }
+
 a:link, a:visited {
-background-color: rgb(25, 158, 207);
-color: white;
-padding: 14px 25px;
-text-align: center;
-text-decoration: none;
-display: inline-block;
+  background-color: rgb(25, 158, 207);
+  color: white;
+  padding: 14px 25px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
 }
+
 a:hover, a:active, button:hover {
-background-color: #00DBFF;
+  background-color: #00DBFF;
 }
+
 button {
-background-color: rgb(25, 158, 207);
-color: white;
-padding: 14px 25px;
-text-align: center;
-text-decoration: none;
-display: inline-block;
-margin-top: 20px;    
-margin-right: 20px;    
-margin-left: 20px; 
+  background-color: rgb(25, 158, 207);
+  color: white;
+  padding: 14px 25px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  margin-top: 20px;    
+  margin-right: 20px;    
+  margin-left: 20px; 
 }
+
 h1 {
-color: rgb(251, 235, 27);
-text-align: center;
-font-size: 48px;
-font-weight: 700;
-
-height: 0%;
+  color: rgb(251, 235, 27);
+  text-align: center;
+  font-size: 48px;
+  font-weight: 700;
+  height: 0%;
 }
+
 h3 {
-color: white;
-text-align: center;
-font-size: 38px;
-padding-left: 50px;
+  color: white;
+  text-align: center;
+  font-size: 38px;
+  padding-left: 50px;
 }
+
 p {
-color: white;
-font-size: 28px;
-font-weight: 300;
-padding-left: 50px;
-padding-right: 50px;
+  color: white;
+  font-size: 28px;
+  font-weight: 300;
+  padding-left: 50px;
+  padding-right: 50px;
 }
-
-
-
