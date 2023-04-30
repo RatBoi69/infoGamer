@@ -40,7 +40,7 @@
 <html>
   <head>
     <title>Account</title>
-    <?php echo '<link rel="stylesheet" type="text/css" href="css/profile.css"></head>'; ?>
+    <?php echo '<link rel="stylesheet" type="text/css" href="css/main.css"></head>'; ?>
 
     <style>
       /* Style the dropdown button */
