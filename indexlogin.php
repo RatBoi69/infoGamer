@@ -160,11 +160,11 @@
         echo "<tr class='spaceAbove'>"; 
         echo "<th style='width:10%'>Title</th>"; 
         echo "<th style='width:2%'></th>"; //blank
-        echo "<th style='width:33%'>Description</th>"; 
+        echo "<th style='width:35%'>Description</th>"; 
         echo "<th style='width:2%'></th>"; //blank
         echo "<th style='width:7%'>Cost</th>"; 
         echo "<th style='width:2%'></th>"; //blank
-        echo "<th style='width:7%'>Number of Players</th>"; 
+        echo "<th style='width:5%'>Players</th>"; 
         echo "<th style='width:2%'></th>"; //blank
         echo "<th style='width:10%'>Genre</th>"; 
         echo "<th style='width:2%'></th>"; //blank
