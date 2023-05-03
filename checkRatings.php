@@ -57,5 +57,5 @@
     $updateRating = "UPDATE games set Game_Rating=$x where Game_ID=$gid";
     $conn->query($updateRating);
 
-    header('Location: indexLogin.php');
+    header('Location: indexlogin.php');
 ?>
