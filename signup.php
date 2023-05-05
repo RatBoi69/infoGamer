@@ -32,6 +32,18 @@
     
     // redirecting them based on if the insert passed or failed
     if ($conn->query($sql) === TRUE) {
+
+        $checking = "SELECT * from usersList WHERE Username='$use' AND Password='$pass'";
+        $result = $conn->query($checking);
+        if ($result->num_rows > 1) {
+            $result->data_seek(1);
+            while($row = $result->fetch_assoc()) {
+                $identify = $row["User_ID"];
+                $del = "DELETE FROM usersList WHERE User_ID=$identify";
+                $conn->query($del);
+            }
+        }
+
         header('Location: login.html');
         $conn->close();
     } else {
